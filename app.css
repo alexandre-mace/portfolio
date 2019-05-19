@@ -181,6 +181,11 @@ a:hover {
     letter-spacing: 10px;
     margin-top: 10rem;
 }
+@media screen and (max-width: 550px) {
+    #displayed-skill {
+        height: 60px;
+    }
+}
 /* CONTACT */
 #contact {
     margin-top: 8rem;
