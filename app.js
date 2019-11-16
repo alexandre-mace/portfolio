@@ -31,7 +31,7 @@ window.onload = function() {
     firstProject.dispatchEvent(mouseoverEvent);
 
     // RANDOM SKILL DISPLAY
-    const skills = ['symfony', 'api platform', 'react', 'html/css', 'javascript', 'git', 'docker', 'mysql', 'doctrine', 'UML', 'phpunit', 'travis'];
+    const skills = ['symfony', 'api platform', 'react', 'vuejs', 'javascript', 'mysql', 'UML', 'testing', 'travis'];
     window.setInterval(function(){
         let displayedSkill = skills[Math.floor(Math.random()*skills.length)];
         while (displayedSkill === document.getElementById("displayed-skill").innerHTML) {
@@ -45,16 +45,17 @@ window.onload = function() {
     let skillsSectionPosition = document.getElementById("skills").offsetTop;
     let displayedScrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
-    if(displayedScrollPosition >= (projectsSectionPosition - 200) && displayedScrollPosition < (skillsSectionPosition - 300))
-        document.getElementById("projects-section-title").className = "";
-    else
-        document.getElementById("projects-section-title").className = "hidden";
-    window.onscroll = function () {
-        displayedScrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    function checkIfNeedsToDisplayProjectSectionTitle() {
         if(displayedScrollPosition >= (projectsSectionPosition - 200) && displayedScrollPosition < (skillsSectionPosition - 300))
             document.getElementById("projects-section-title").className = "";
         else
             document.getElementById("projects-section-title").className = "hidden";
+    }
+
+    checkIfNeedsToDisplayProjectSectionTitle();
+    window.onscroll = function () {
+        displayedScrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        checkIfNeedsToDisplayProjectSectionTitle();
     };
 
     // MOBILE PROJECTS DESCRIPTIONS
@@ -64,7 +65,7 @@ window.onload = function() {
                 const mobileProjectDescription = project.getElementsByClassName('mobile-project-description')[0];
                 mobileProjectDescription.innerHTML = project.dataset.description;
                 mobileProjectDescription.classList.add('mt-2')
-            })
+            });
             Array.from(document.getElementsByClassName('displayed-project-notifier')).forEach( function (displayedProjectNotifier) {
                 displayedProjectNotifier.remove();
             });

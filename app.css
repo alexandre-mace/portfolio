@@ -18,6 +18,7 @@
 body {
     font-family: 'hk_groteskbold', 'sans-serif';
     color: black;
+    margin: 0;
 }
 p {
     margin-top: 0;
@@ -36,14 +37,14 @@ a:hover {
 }
 /* INTRODUCTION */
 #introduction p{
-    padding: 30px 60px 0 60px;
+    padding: 15px 60px 0 60px;
     font-size: calc(40px + (150 - 40) * ((100vw - 300px) / (1600 - 300)));
     line-height: 1;
     background: white;
 }
 @media screen and (max-width: 970px) {
     #introduction p{
-        padding: 15px 30px 0 30px;
+        padding: 10px 30px 0 30px;
     }
 }
 @media screen and (max-width: 600px) {
@@ -85,6 +86,8 @@ a:hover {
     margin-left: 1rem;
     font-size: calc(16px + (20 - 16) * ((100vw - 300px) / (1600 - 300)));
     color: gray;
+    display: inline-block;
+    transform: translateY(-5px);
     -webkit-transition: margin-left 1s; /* For Safari 3.1 to 6.0 */
     transition: margin-left 1s;
 }
@@ -99,8 +102,11 @@ a:hover {
 #projects .project-title {
     margin: 0;
     position: relative;
+    line-height: 1;
 }
 #displayed-project-section {
+    margin-left: 2rem;
+    min-height: 600px;
     width: 65%;
     background: black;
     position: relative;
@@ -121,7 +127,7 @@ a:hover {
     background: rgba(0,0,0,0.8);
 }
 #displayed-project-section #displayed-project-description {
-    padding: 1.2rem;
+    padding: 2rem;
     font-size: 3.3rem;
     color: white;
     position: absolute;
@@ -199,6 +205,9 @@ a:hover {
 .justify-content-between {
     justify-content: space-between;
 }
+.align-items-center {
+    align-items: center;
+}
 .mx-auto {
     margin-left: auto;
     margin-right: auto;
@@ -210,5 +219,5 @@ a:hover {
     visibility: hidden;
 }
 .mt-2 {
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
