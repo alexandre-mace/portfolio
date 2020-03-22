@@ -31,22 +31,23 @@ window.onload = function() {
     firstProject.dispatchEvent(mouseoverEvent);
 
     // RANDOM SKILL DISPLAY
-    const skills = ['symfony', 'api platform', 'react', 'vuejs', 'javascript', 'mysql', 'UML', 'testing', 'travis'];
-    window.setInterval(function(){
-        let displayedSkill = skills[Math.floor(Math.random()*skills.length)];
-        while (displayedSkill === document.getElementById("displayed-skill").innerHTML) {
-            displayedSkill = skills[Math.floor(Math.random()*skills.length)];
-        }
-        document.getElementById("displayed-skill").innerHTML = displayedSkill;
-    }, 800);
+    // const skills = ['symfony', 'api platform', 'react', 'vuejs', 'javascript', 'mysql', 'UML', 'testing', 'travis'];
+    // window.setInterval(function(){
+    //     let displayedSkill = skills[Math.floor(Math.random()*skills.length)];
+    //     while (displayedSkill === document.getElementById("displayed-skill").innerHTML) {
+    //         displayedSkill = skills[Math.floor(Math.random()*skills.length)];
+    //     }
+    //     document.getElementById("displayed-skill").innerHTML = displayedSkill;
+    // }, 800);
 
     // SHOW PROJECTS SECTION TITLE ON SCROLL
     let projectsSectionPosition = document.getElementById("projects").offsetTop;
-    let skillsSectionPosition = document.getElementById("skills").offsetTop;
+    // let skillsSectionPosition = document.getElementById("skills").offsetTop;
     let displayedScrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
     function checkIfNeedsToDisplayProjectSectionTitle() {
-        if(displayedScrollPosition >= (projectsSectionPosition - 200) && displayedScrollPosition < (skillsSectionPosition - 300))
+        // if(displayedScrollPosition >= (projectsSectionPosition - 200) && displayedScrollPosition < (skillsSectionPosition - 300))
+        if (displayedScrollPosition >= (projectsSectionPosition - 200))
             document.getElementById("projects-section-title").className = "";
         else
             document.getElementById("projects-section-title").className = "hidden";
