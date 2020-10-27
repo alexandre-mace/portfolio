@@ -1,35 +1,40 @@
 window.onload = function() {
+    let mediaQuery = window.matchMedia("(max-width: 970px)");
+
     // CURRENT PROJECT NOTIFIER
     const projects = document.getElementsByClassName('project');
-    Array.from(projects).forEach(function (project) {
-        project.addEventListener("mouseover", function( event ) {
-            // display the displayed project info
-            document.getElementById('displayed-project-image').style.backgroundImage = `url(${this.dataset.img})`;
-            document.getElementById('displayed-project-description').innerHTML = this.dataset.description;
+    if (!mediaQuery.matches) {
 
-            // remove all existing displayed project notifier and all active labels
-            Array.from(document.getElementsByClassName('displayed-project-notifier')).forEach( function (displayedProjectNotifier) {
-                displayedProjectNotifier.remove();
-            });
-            Array.from(document.getElementsByClassName('project-label')).forEach( function (label) {
-                label.classList.remove('project-label-active');
-            });
+        Array.from(projects).forEach(function (project) {
+                project.addEventListener("mouseover", function (event) {
+                    if (this.classList.contains('project') && !event.target.classList.contains('project-label')) {
 
-            // display the displayed project notifier
-            this.getElementsByClassName('project-label')[0].classList.add('project-label-active');
+                        // display the displayed project info
+                        document.getElementById('displayed-project-description').replaceChild(this.querySelector('.project-details').cloneNode(true), document.getElementById('displayed-project-description').children[0]);
 
-            const displayedProjectNotifier = document.createElement('span');
-            displayedProjectNotifier.innerHTML = '';
-            displayedProjectNotifier.classList.add('displayed-project-notifier');
-            this.getElementsByClassName('project-title')[0].prepend(displayedProjectNotifier);
-        });
-    })
+                        // remove all existing displayed project notifier and all active labels
+                        Array.from(document.getElementsByClassName('displayed-project-notifier')).forEach(function (displayedProjectNotifier) {
+                            displayedProjectNotifier.remove();
+                        });
+                        Array.from(document.getElementsByClassName('project-label')).forEach(function (label) {
+                            label.classList.remove('project-label-active');
+                        });
+                        // display the displayed project notifier
+                        this.getElementsByClassName('project-label')[0].classList.add('project-label-active');
 
-    // DISPLAY 1ST PROJECT BY DEFAULT
-    const firstProject = document.getElementsByClassName('project')[0];
-    const mouseoverEvent = new Event('mouseover');
-    firstProject.dispatchEvent(mouseoverEvent);
+                        const displayedProjectNotifier = document.createElement('span');
+                        displayedProjectNotifier.innerHTML = '';
+                        displayedProjectNotifier.classList.add('displayed-project-notifier');
+                        this.getElementsByClassName('project-title')[0].prepend(displayedProjectNotifier);
+                    }
+                });
+        })
 
+        // DISPLAY 1ST PROJECT BY DEFAULT
+        const firstProject = document.getElementsByClassName('project')[0];
+        const mouseoverEvent = new Event('mouseover');
+        firstProject.dispatchEvent(mouseoverEvent);
+    }
     // RANDOM SKILL DISPLAY
     // const skills = ['symfony', 'api platform', 'react', 'vuejs', 'javascript', 'mysql', 'UML', 'testing', 'travis'];
     // window.setInterval(function(){
@@ -64,8 +69,9 @@ window.onload = function() {
         if (mediaQuery.matches) {
             Array.from(document.getElementsByClassName('project')).forEach(function (project) {
                 const mobileProjectDescription = project.getElementsByClassName('mobile-project-description')[0];
-                mobileProjectDescription.innerHTML = project.dataset.description;
-                mobileProjectDescription.classList.add('mt-2')
+                if (mobileProjectDescription.children.length > 0) {
+                    mobileProjectDescription.replaceChild(mobileProjectDescription.parentNode.querySelector('.project-details').cloneNode(true), mobileProjectDescription.children[0]);
+                }
             });
             Array.from(document.getElementsByClassName('displayed-project-notifier')).forEach( function (displayedProjectNotifier) {
                 displayedProjectNotifier.remove();
@@ -74,12 +80,10 @@ window.onload = function() {
             Array.from(document.getElementsByClassName('project')).forEach(function (project) {
                 const mobileProjectDescription = project.getElementsByClassName('mobile-project-description')[0];
                 mobileProjectDescription.innerHTML = '';
-                mobileProjectDescription.classList.remove('mt-2')
             })
         }
     }
 
-    let mediaQuery = window.matchMedia("(max-width: 970px)");
     showMobileDescription(mediaQuery)
     mediaQuery.addListener(showMobileDescription)
 };

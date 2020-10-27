@@ -37,19 +37,20 @@ a:hover {
 }
 /* INTRODUCTION */
 #introduction p{
-    padding: 15px 60px 0 60px;
-    font-size: calc(40px + (150 - 40) * ((100vw - 300px) / (1600 - 300)));
+    padding: 10rem 60px 0 60px;
+    font-size: calc(20px + (45 - 20) * ((100vw - 300px) / (1600 - 300)));
     line-height: 1;
     background: white;
+    margin-bottom: 0;
 }
 @media screen and (max-width: 970px) {
     #introduction p{
-        padding: 10px 30px 0 30px;
+        padding: 5rem 30px 0 30px;
     }
 }
 @media screen and (max-width: 600px) {
     #introduction p{
-        padding: 8px 16px 0 16px;
+        padding: 2rem 16px 0 16px;
     }
 }
 /* PROJECTS*/
@@ -63,9 +64,11 @@ a:hover {
 }
 #projects {
     margin-top: 10rem;
-    font-size: calc(20px + (24 - 20) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(14px + (16 - 14) * ((100vw - 300px) / (1600 - 300)));
     padding-left: 12%;
     padding-right: 12%;
+    width: calc(100% - 24%);
+    overflow: hidden;
 }
 #projects ul {
     list-style: none;
@@ -74,17 +77,21 @@ a:hover {
     margin-bottom: 0;
 }
 #projects ul li {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     position: relative;
-    line-height: 0.6;
+    line-height: 0.7;
     cursor: auto;
+    display: inline-block;
+    width: intrinsic;           /* Safari/WebKit uses a non-standard name */
+    width: -moz-max-content;    /* Firefox/Gecko */
+    width: -webkit-max-content; /* Chrome */
 }
 #projects ul li:last-child {
     margin-bottom: 0;
 }
 #projects ul li .project-label {
     margin-left: 1rem;
-    font-size: calc(16px + (20 - 16) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(14px + (17 - 14) * ((100vw - 300px) / (1600 - 300)));
     color: gray;
     display: inline-block;
     transform: translateY(-5px);
@@ -98,15 +105,43 @@ a:hover {
 }
 .mobile-project-description {
     line-height: 1;
+    display: none;
+}
+.project-details {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.project .project-details {
+    display: none;
+    width: 0;
+    top: 0;
+    right: 0;
+    position: absolute;
+    opacity: 0;
+    height: 0;
+}
+.mobile-project-description .project-details {
+    width: auto;
+    position: relative;
+    opacity: 1;
+    height: auto;
 }
 #projects .project-title {
     margin: 0;
     position: relative;
     line-height: 1;
 }
+.project > a:hover {
+    text-decoration: none;
+}
+.project-title:hover {
+    cursor: crosshair;
+}
 #displayed-project-section {
     margin-left: 2rem;
-    min-height: 600px;
+    min-height: 65vh;
+    max-height: 70vh;
     width: 65%;
     background: black;
     position: relative;
@@ -126,13 +161,23 @@ a:hover {
     bottom: 0;
     background: rgba(0,0,0,0.8);
 }
+.project-details-title {
+    margin-top: 0;
+}
+.project-details-description {
+    margin-top: auto;
+}
+.project-details-link {
+    color: blue !important;
+}
+.project-details-link:hover {
+    cursor: pointer;
+}
 #displayed-project-section #displayed-project-description {
-    padding: 2rem;
-    font-size: 3.3rem;
+    padding: 1.5rem;
     color: white;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    height: calc(100% - 48px);
 }
 .displayed-project-notifier {
     position: absolute;
@@ -141,6 +186,11 @@ a:hover {
     background: black;
     top: 50%;
     left: -20px;
+}
+.project-anchor {
+    display: inline-block;
+    width: auto;
+    color: #007bff;
 }
 @media screen and (max-width: 1350px) {
     #projects-section-title {
@@ -151,13 +201,26 @@ a:hover {
 @media screen and (max-width: 1200px) {
     #projects {
         padding-left: 5%;
-        padding-right: 5%;
+        padding-right: 0;
     }
 }
 @media screen and (max-width: 970px) {
+    .mobile-project-description {
+        display: block;
+    }
+    .project .project-details {
+        display: inline-flex;
+        max-width: 100%;
+        position: relative;
+    }
+    .project {
+        width: auto !important;
+    }
+    .project-anchor {
+        display: none;
+    }
     #projects {
-        margin-top: 7rem;
-        padding-right: 25%;
+        margin-top: 5rem;
     }
     #displayed-project-section {
         display: none;
@@ -172,13 +235,10 @@ a:hover {
         writing-mode: vertical-rl;
         text-orientation: upright;
     }
-    #projects {
-        padding-right: 18%;
-    }
 }
 @media screen and (max-width: 600px) {
     #projects {
-        margin-top: 4rem;
+        margin-top: 2.5rem;
     }
 }
 /* SKILLS */
@@ -201,6 +261,9 @@ a:hover {
 /* HELPERS */
 .d-flex {
     display: flex;
+}
+.flex-column {
+    flex-direction: column;
 }
 .justify-content-between {
     justify-content: space-between;
