@@ -37,13 +37,13 @@ a:hover {
 }
 /* INTRODUCTION */
 #introduction p{
-    padding: 10rem 5% 0 5%;
+    padding: 10rem 12% 0 12%;
     font-size: calc(20px + (45 - 20) * ((100vw - 300px) / (1600 - 300)));
     line-height: 1;
     background: white;
     margin-bottom: 0;
 }
-@media screen and (max-width: 970px) {
+@media screen and (max-width: 1200px) {
     #introduction p{
         padding: 5rem 5% 0 5%;
     }
@@ -64,7 +64,7 @@ a:hover {
 }
 #projects {
     margin-top: 10rem;
-    font-size: calc(14px + (16 - 14) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(16px + (25 - 16) * ((100vw - 300px) / (1600 - 300)));
     padding-left: 12%;
     padding-right: 12%;
     width: calc(100% - 24%);
