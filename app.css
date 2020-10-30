@@ -93,6 +93,9 @@ header ul li {
 header a {
     color: black;
 }
+header a:hover {
+    text-decoration: none;
+}
 main a {
     font-family: 'axiformabold', sans-serif;
 }
