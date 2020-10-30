@@ -15,20 +15,31 @@
     <title>alexandre macé - developer</title>
 </head>
 <body>
+<header>
+    <ul>
+        <li><a href="mailto:contact.alexandremace@gmail.com">Email</a></li>
+        <li><a href="https://github.com/alexandre-mace" target="_blank">github</a></li>
+        <li><a href="https://www.linkedin.com/in/alexandre-mac%C3%A9/" target="_blank">Linkedin</a></li>
+    </ul>
+</header>
 <main>
-    <span id="projects-section-title" class="hidden">
-        my projects
-    </span>
     <section id="introduction">
-        <p>my name is alexandre macé. i am a french developer, currently working with <a href="https://symfony.com/" target="_blank">symfony</a>, <a href="https://api-platform.com/" target="_blank">api platform</a> and <a href="https://reactjs.org/" target="_blank">react</a>. my aim is to work on projects that will have a <span class="custom-italic">positive impact</span> on this world.</p>
+        <p class="main">My name is Alexandre Macé.</p>
+        <p>I am a french developer, currently working with <a href="https://symfony.com/" target="_blank">symfony</a>, <a href="https://api-platform.com/" target="_blank">api platform</a> and <a href="https://reactjs.org/" target="_blank">react</a>. My aim is to work on projects that will have a <span class="custom-italic">positive impact</span> on this world.</p>
     </section>
+    <div class="text-circle-wrapper-wrapper">
+        <div class="text-circle-wrapper">
+            <div class="text-circle"></div>
+        </div>
+    </div>
+
     <section id="projects" class="d-flex justify-content-between align-items-center">
         <ul class="d-flex flex-column">
             <li class="project" >
                 <div class="project-details">
                     <h3 class="project-details-title">Energy book</h3>
                     <p>Interactive book about energy</p>
-                    <p>React</p>
+                    <p class="project-details-tech">React</p>
                     <p class="project-details-link"><a target="_blank" href="https://energybook.fr/">Online</a></p>
                     <p class="project-details-link"><a target="_blank" href="https://github.com/alexandre-mace/energybook">Github</a></p>
                     <p class="project-details-description">Dynamic data visualization project, using look alike domain driven architecture, chartjs and csv/json sources files. The book has 3 modes : playground, versus and narrative.</p>
@@ -38,7 +49,7 @@
                 <div class="project-details">
                     <h3 class="project-details-title">Together</h3>
                     <p>Linking associations and volonteers</p>
-                    <p>Api platform / React</p>
+                    <p class="project-details-tech">Api platform / React</p>
                     <p class="project-details-link"><a target="_blank" href="https://alexandre-mace.github.io/together">Online</a></p>
                     <p class="project-details-link"><a target="_blank" href="https://github.com/alexandre-mace/together">Github</a></p>
                     <p class="project-details-description">This project has two modes : associations and volonteers. The dashboard / wording adapt itself so.</p>
@@ -48,7 +59,7 @@
                 <div class="project-details">
                     <h3 class="project-details-title">Nouveau monde</h3>
                     <p>Sharing everyone's new world vision</p>
-                    <p>Symfony</p>
+                    <p class="project-details-tech">Symfony</p>
                     <p class="project-details-link"><a target="_blank" href="https://nouveaumonde.herokuapp.com">Online</a></p>
                     <p class="project-details-link"><a target="_blank" href="https://github.com/alexandre-mace/nouveaumonde">Github</a></p>
                     <p class="project-details-description">This project has CRUD proposals, user system and bubble like/dislike sorting feature.</p>
@@ -58,7 +69,7 @@
                 <div class="project-details">
                     <h3 class="project-details-title">Action</h3>
                     <p>Find local events about climate</p>
-                    <p>Api platform / React</p>
+                    <p class="project-details-tech">Api platform / React</p>
                     <p class="project-details-link"><a target="_blank" href="https://alexandre-mace.github.io/action">Online</a></p>
                     <p class="project-details-link"><a target="_blank" href="https://github.com/alexandre-mace/action">Github</a></p>
                     <p class="project-details-description">This project features event registration and geocoding.</p>
@@ -68,7 +79,7 @@
                 <div class="project-details">
                     <h3 class="project-details-title">Wealth repartition simulator</h3>
                     <p>What would happen if wealth was shared ?</p>
-                    <p>React</p>
+                    <p class="project-details-tech">React</p>
                     <p class="project-details-link"><a target="_blank" href="https://alexandre-mace.github.io/wealth-repartition-simulator">Online</a></p>
                     <p class="project-details-link"><a target="_blank" href="https://github.com/alexandre-mace/wealth-repartition-simulator">Github</a></p>
                     <p class="project-details-description">Dynamic data visualization project about wealth / poverty. The map, data bindings and color system are done from scratch.</p>
@@ -78,7 +89,7 @@
                 <div class="project-details">
                     <h3 class="project-details-title">Seed</h3>
                     <p>Community-based suggestion box</p>
-                    <p>Api platform / React</p>
+                    <p class="project-details-tech">Api platform / React</p>
                     <p class="project-details-link"><a target="_blank" href="https://github.com/alexandre-mace/seed">Github</a></p>
                     <p class="project-details-description">Propose your project at any state, get help from the community and build things together.</p>
                 </div>
@@ -87,23 +98,12 @@
                 <div class="project-details">
                     <h3 class="project-details-title">Emy</h3>
                     <p>Collaborative food platform</p>
-                    <p>Api platform / React</p>
+                    <p class="project-details-tech">Api platform / React</p>
                     <p class="project-details-link"><a target="_blank" href="https://github.com/alexandre-mace/emy">Github</a></p>
                     <p class="project-details-description">Emy is here to help people finding food and fight against food waste. (Not aimed to production, Geev is already doing it better). The project features a map using leaflet and geocoding computing.</p>
                 </div>
             </li>
         </ul>
-    </section>
-    <!--     <section id="skills" class="d-flex">
-        <p id="displayed-skill" class="mx-auto text-center">symfony</p>
-    </section>     -->
-    <section id="contact" class="d-flex">
-        <div class="mx-auto">
-            <p class="text-center">GET IN TOUCH</p>
-            <a href="https://github.com/alexandre-mace" target="_blank">github</a>
-            <a href="https://www.linkedin.com/in/alexandre-mac%C3%A9/" target="_blank">linkedin</a>
-            <a href="mailto:contact.alexandremace@gmail.com">email me</a>
-        </div>
     </section>
 </main>
 <script src="app.js"></script>

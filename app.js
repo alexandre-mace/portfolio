@@ -1,89 +1,44 @@
 window.onload = function() {
-    // let mediaQuery = window.matchMedia("(max-width: 970px)");
-
-    // CURRENT PROJECT NOTIFIER
-    // const projects = document.getElementsByClassName('project');
-    // if (!mediaQuery.matches) {
-    //
-    //     Array.from(projects).forEach(function (project) {
-    //             project.addEventListener("mouseover", function (event) {
-    //                 if (this.classList.contains('project') && !event.target.classList.contains('project-label')) {
-    //
-    //                     // display the displayed project info
-    //                     document.getElementById('displayed-project-description').replaceChild(this.querySelector('.project-details').cloneNode(true), document.getElementById('displayed-project-description').children[0]);
-    //
-    //                     // remove all existing displayed project notifier and all active labels
-    //                     Array.from(document.getElementsByClassName('displayed-project-notifier')).forEach(function (displayedProjectNotifier) {
-    //                         displayedProjectNotifier.remove();
-    //                     });
-    //                     Array.from(document.getElementsByClassName('project-label')).forEach(function (label) {
-    //                         label.classList.remove('project-label-active');
-    //                     });
-    //                     // display the displayed project notifier
-    //                     this.getElementsByClassName('project-label')[0].classList.add('project-label-active');
-    //
-    //                     const displayedProjectNotifier = document.createElement('span');
-    //                     displayedProjectNotifier.innerHTML = '';
-    //                     displayedProjectNotifier.classList.add('displayed-project-notifier');
-    //                     this.getElementsByClassName('project-title')[0].prepend(displayedProjectNotifier);
-    //                 }
-    //             });
-    //     })
-    //
-    //     // DISPLAY 1ST PROJECT BY DEFAULT
-    //     const firstProject = document.getElementsByClassName('project')[0];
-    //     const mouseoverEvent = new Event('mouseover');
-    //     firstProject.dispatchEvent(mouseoverEvent);
-    // }
-    // RANDOM SKILL DISPLAY
-    // const skills = ['symfony', 'api platform', 'react', 'vuejs', 'javascript', 'mysql', 'UML', 'testing', 'travis'];
-    // window.setInterval(function(){
-    //     let displayedSkill = skills[Math.floor(Math.random()*skills.length)];
-    //     while (displayedSkill === document.getElementById("displayed-skill").innerHTML) {
-    //         displayedSkill = skills[Math.floor(Math.random()*skills.length)];
-    //     }
-    //     document.getElementById("displayed-skill").innerHTML = displayedSkill;
-    // }, 800);
-
-    // SHOW PROJECTS SECTION TITLE ON SCROLL
-    let projectsSectionPosition = document.getElementById("projects").offsetTop;
-    // let skillsSectionPosition = document.getElementById("skills").offsetTop;
-    let displayedScrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-
-    function checkIfNeedsToDisplayProjectSectionTitle() {
-        // if(displayedScrollPosition >= (projectsSectionPosition - 200) && displayedScrollPosition < (skillsSectionPosition - 300))
-        if (displayedScrollPosition >= (projectsSectionPosition - 200))
-            document.getElementById("projects-section-title").className = "";
-        else
-            document.getElementById("projects-section-title").className = "hidden";
+    let mediaQuery5 = window.matchMedia("(max-width: 1400px)");
+    let mediaQuery4 = window.matchMedia("(max-width: 1200px)");
+    let mediaQuery3 = window.matchMedia("(max-width: 993px)");
+    let mediaQuery2 = window.matchMedia("(max-width: 800px)");
+    let mediaQuery1 = window.matchMedia("(max-width: 600px)");
+    let text = "symfony, api platform and react. symfony, api platform and react. "
+    if (mediaQuery1.matches) {
+        text = "symfony, api platform and react. "
+        circularText(text, 50, 0);
+    } else if (mediaQuery2.matches)  {
+        circularText(text, 85, 0);
+    } else if (mediaQuery3.matches)  {
+        circularText(text, 100, 0);
+    } else if (mediaQuery4.matches)  {
+        circularText(text, 130, 0);
+    } else if (mediaQuery5.matches)  {
+        circularText(text, 160, 0);
+    } else {
+        circularText(text, 200, 0);
     }
 
-    checkIfNeedsToDisplayProjectSectionTitle();
-    window.onscroll = function () {
-        displayedScrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-        checkIfNeedsToDisplayProjectSectionTitle();
-    };
+    function circularText(txt, radius, classIndex) {
+        txt = txt.split(""),
+            classIndex = document.getElementsByClassName("text-circle")[classIndex];
 
-    // MOBILE PROJECTS DESCRIPTIONS
-    // function showMobileDescription(mediaQuery) {
-    //     if (mediaQuery.matches) {
-    //         Array.from(document.getElementsByClassName('project')).forEach(function (project) {
-    //             const mobileProjectDescription = project.getElementsByClassName('mobile-project-description')[0];
-    //             if (mobileProjectDescription.children.length > 0) {
-    //                 mobileProjectDescription.replaceChild(mobileProjectDescription.parentNode.querySelector('.project-details').cloneNode(true), mobileProjectDescription.children[0]);
-    //             }
-    //         });
-    //         Array.from(document.getElementsByClassName('displayed-project-notifier')).forEach( function (displayedProjectNotifier) {
-    //             displayedProjectNotifier.remove();
-    //         });
-    //     } else {
-    //         Array.from(document.getElementsByClassName('project')).forEach(function (project) {
-    //             const mobileProjectDescription = project.getElementsByClassName('mobile-project-description')[0];
-    //             mobileProjectDescription.innerHTML = '';
-    //         })
-    //     }
-    // }
-    //
-    // showMobileDescription(mediaQuery)
-    // mediaQuery.addListener(showMobileDescription)
+        var deg = 360 / txt.length,
+            origin = 0;
+
+        let lastLetter = '';
+        txt.forEach((letter) => {
+            const letterP = `<p style='height:${radius}px;padding-left:${(letter === 'f' && lastLetter === 'm') || (letter === 'r' && lastLetter === ' ') ? "5px" : letter === 'l' ? '5px' : 0};position:absolute;transform:rotate(${origin}deg);transform-origin:0 100%'>${letter}</p>`;
+            classIndex.innerHTML += letterP;
+            origin += deg;
+            lastLetter = letter;
+        });
+    }
+    const textCircleWrapper = document.getElementsByClassName("text-circle-wrapper")[0];
+
+    window.addEventListener("scroll", function() {
+        textCircleWrapper.style.transform = "rotate("+window.pageYOffset / 6+"deg)";
+    });
 };
+

@@ -1,23 +1,48 @@
 /* GENERAL */
 @font-face {
-    font-family: 'hk_groteskbold';
-    src: url('fonts/hkgrotesk-bold-webfont.woff2') format('woff2'),
-    url('fonts/hkgrotesk-bold-webfont.woff') format('woff');
+    font-family: 'axiformabold';
+    src: url('fonts/Axiforma-Bold.woff2') format('woff2'),
+    url('fonts/Axiforma-Bold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
 @font-face {
-    font-family: 'hk_groteskbold_italic';
-    src: url('fonts/hkgrotesk-bolditalic-webfont.woff2') format('woff2'),
-    url('fonts/hkgrotesk-bolditalic-webfont.woff') format('woff');
+    font-family: 'axiformamedium';
+    src: url('fonts/Axiforma-Medium.woff2') format('woff2'),
+    url('fonts/Axiforma-Medium.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
+@font-face {
+    font-family: 'axiformamediumitalic';
+    src: url('fonts/Axiforma-MediumItalic.woff2') format('woff2'),
+    url('fonts/Axiforma-MediumItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'axiformalegacyitalic';
+    src: url('fonts/Axiforma-BookItalic.woff2') format('woff2'),
+    url('fonts/Axiforma-BookItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'axiformaregularlegacy';
+    src: url('fonts/Axiforma-Book.woff2') format('woff2'),
+    url('fonts/Axiforma-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+html {
+    font-size: 16px;
+}
 body {
-    font-family: 'hk_groteskbold', 'sans-serif';
+    font-family: 'axiformamedium', 'sans-serif';
     color: black;
+    background-color: #F7F8FA;
     margin: 0;
 }
 p {
@@ -25,7 +50,7 @@ p {
     margin-bottom: 1rem;
 }
 a {
-    color: #007bff;
+    color: #0737ff;
     text-decoration: none;
     background-color: transparent;
 }
@@ -33,42 +58,68 @@ a:hover {
     text-decoration: underline;
 }
 .custom-italic {
-    font-family: 'hk_groteskbold_italic', 'sans-serif';
+    font-family: 'axiformamediumitalic', 'sans-serif';
 }
-/* INTRODUCTION */
-#introduction p{
-    padding: 10rem 12% 0 12%;
-    font-size: calc(20px + (45 - 20) * ((100vw - 300px) / (1600 - 300)));
-    line-height: 1;
-    background: white;
-    margin-bottom: 0;
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
 }
-@media screen and (max-width: 1200px) {
-    #introduction p{
-        padding: 5rem 5% 0 5%;
-    }
+body {
+    padding: 7rem 40rem 7rem 10rem;
+    width: calc(100% - 70rem);
+    font-size: 1.3rem;
 }
-@media screen and (max-width: 600px) {
-    #introduction p{
-        padding: 2rem 5% 0 5%;
-    }
+header ul {
+    font-size: 1.2rem;
+    font-family: 'axiformabold', sans-serif;
+}
+header ul li {
+    display: inline-block;
+    margin-right: 6rem;
+}
+header a {
+    color: black;
+}
+main a {
+    font-family: 'axiformabold', sans-serif;
+}
+#introduction {
+    margin-top: 6rem;
+    margin-bottom: 7rem;
+    font-size: 1.8rem;
+}
+#introduction .main {
+    font-size: 2.7rem;
+    font-family: 'axiformabold', sans-serif;
+    margin-bottom: 3.5rem;
+}
+.text-circle {
+    display: inline-block;
+    height: 390px;
+    width: 400px;
+    transform: translateX(50%);
+    color: #0737ff;
+}
+.text-circle-wrapper-wrapper {
+    position: fixed;
+    bottom: 100px;
+    right: 150px;
+    -webkit-transform: translate(-5%, -5%) skewX(-40deg);
+    -ms-transform: translate(-5%, -5%) skewX(-40deg);
+    transform: translate(-5%, -5%) skewX(-40deg);
 }
 /* PROJECTS*/
-#projects-section-title {
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
-    float: right;
-    margin-right: 25px;
-    top: 25px;
-    font-size: 1.5rem;
-}
 #projects {
-    margin-top: 10rem;
     font-size: calc(16px + (25 - 16) * ((100vw - 300px) / (1600 - 300)));
-    padding-left: 12%;
-    padding-right: 12%;
-    width: calc(100% - 24%);
     overflow: hidden;
+}
+.project-details-title {
+    font-size: 3rem;
+}
+.project-details-tech {
+    font-family: 'axiformamediumitalic', 'sans-serif';
+    margin-bottom: 1.2rem;
 }
 #projects ul {
     list-style: none;
@@ -97,61 +148,127 @@ a:hover {
     text-decoration: none;
 }
 .project-details-description {
-    margin-top: auto;
+    margin-top: 1rem;
     line-height: 1;
-}
-.project-details-link {
-    color: blue !important;
 }
 .project-details-link:hover {
     cursor: pointer;
 }
-@media screen and (max-width: 1350px) {
-    #projects-section-title {
-        writing-mode: vertical-rl;
-        text-orientation: upright;
+@media screen and (max-width: 1800px) {
+    body {
+        padding: 5rem 20rem 5rem 8rem;
+        width: calc(100% - 60rem);
+    }
+}
+@media screen and (max-width: 1600px) {
+    body {
+        padding: 5rem 20rem 5rem 8rem;
+        width: calc(100% - 50rem);
+    }
+}
+@media screen and (max-width: 1400px) {
+    body {
+        padding: 5rem 20rem 5rem 8rem;
+        width: calc(100% - 40rem);
+    }
+    .text-circle {
+        height: 310px;
+        width: 320px;
+    }
+    .text-circle-wrapper-wrapper {
+        bottom: 30px;
+        right: 80px;
     }
 }
 @media screen and (max-width: 1200px) {
+    body {
+        padding: 5rem 20rem 5rem 8rem;
+        width: calc(100% - 35rem);
+    }
+    html {
+        font-size: 14px;
+    }
     #projects {
-        margin-top: 5rem;
-        padding-left: 5%;
-        padding-right: 0;
+    }
+    .text-circle {
+        height: 250px;
+        width: 260px;
+    }
+    .text-circle-wrapper-wrapper {
+        bottom: 30px;
+        right: 80px;
     }
 }
-@media screen and (max-width: 970px) {
-    #projects-section-title {
-        writing-mode: horizontal-tb;
-        text-orientation: initial;
+@media screen and (max-width: 993px) {
+    body {
+        padding: 3rem 10rem 3rem 6rem;
+        width: calc(100% - 25rem);
+    }
+    .text-circle {
+        height: 190px;
+        width: 200px;
+    }
+    .text-circle-wrapper-wrapper {
+        bottom: 30px;
+        right: 30px;
+    }
+    .text-circle p {
+        font-size: 16px;
     }
 }
-@media screen and (max-width: 720px) {
-    #projects-section-title {
-        writing-mode: vertical-rl;
-        text-orientation: upright;
+@media screen and (max-width: 800px) {
+    html {
+        font-size: 12px;
+    }
+    body {
+        padding: 3rem 8rem 3rem 3rem;
+        width: calc(100% - 12rem);
+    }
+    .text-circle {
+        height: 162px;
+        width: 170px;
+    }
+    .text-circle-wrapper-wrapper {
+        bottom: 30px;
+        right: 30px;
+    }
+    .text-circle p {
+        font-size: 14px;
     }
 }
 @media screen and (max-width: 600px) {
+    .text-circle {
+        height: 90px;
+        width: 100px;
+    }
+    .text-circle p {
+        font-size: 12px;
+    }
+    .text-circle-wrapper-wrapper {
+        bottom: 20px;
+        right: 20px;
+    }
+    header ul li {
+        font-size: 1.4rem;
+        margin-right: 2rem;
+    }
+    body {
+        padding: 3rem 3rem 12rem 1.5rem;
+        width: calc(100% - 4.5rem);
+    }
+    html {
+        font-size: 12px;
+    }
     #projects {
         margin-top: 2.5rem;
     }
-}
-/* SKILLS */
-#skills {
-    font-size: calc(40px + (150 - 40) * ((100vw - 300px) / (1600 - 300)));
-    letter-spacing: 10px;
-    margin-top: 10rem;
-}
-@media screen and (max-width: 550px) {
-    #displayed-skill {
-        height: 60px;
+    #introduction {
+        margin-top: 3rem;
+        margin-bottom: 4rem;
     }
-}
-/* CONTACT */
-#contact {
-    margin-top: 5rem;
-    font-size: calc(20px + (50 - 20) * ((100vw - 300px) / (1600 - 300)));
-    margin-bottom: 4rem;
+    #introduction .main {
+        margin-bottom: 2.3rem;
+    }
 }
 /* HELPERS */
 .d-flex {
