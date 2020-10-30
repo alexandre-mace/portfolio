@@ -29,7 +29,7 @@ window.onload = function() {
 
         let lastLetter = '';
         txt.forEach((letter) => {
-            const letterP = `<p style='height:${radius}px;padding-left:${(letter === 'f' && lastLetter === 'm') || (letter === 'r' && lastLetter === ' ') ? "5px" : letter === 'l' ? mediaQuery1.matches ? '3px' : '5px' : 0};position:absolute;transform:rotate(${origin}deg);transform-origin:0 100%'>${letter}</p>`;
+            const letterP = `<p style='height:${radius}px;padding-left:${(letter === 'f' && lastLetter === 'm') || (letter === 'r' && lastLetter === ' ') ? "6px" : letter === 'l' ? mediaQuery1.matches ? '3px' : '5px' : 0};position:absolute;transform:rotate(${origin}deg);transform-origin:0 100%'>${letter}</p>`;
             classIndex.innerHTML += letterP;
             origin += deg;
             lastLetter = letter;
