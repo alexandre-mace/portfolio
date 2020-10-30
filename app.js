@@ -41,19 +41,18 @@ window.onload = function() {
         textCircleWrapper.style.transform = "rotate("+window.pageYOffset / 6+"deg)";
     });
 
-    const wrapperPosition = document.getElementById("text-circle-wrapper-position");
+    if (!mediaQuery2.matches) {
+        const wrapperPosition = document.getElementById("text-circle-wrapper-position");
+        function getPositionXY(element) {
+            var rect = element.getBoundingClientRect();
+            return {x: rect.x, y: rect.y}
+        }
 
-    function getPositionXY(element) {
-       var rect = element.getBoundingClientRect();
-       return {x: rect.x, y: rect.y}
+        window.addEventListener('mousemove', e => {
+            const ax = -(getPositionXY(wrapperPosition).x- e.pageX) / 20;
+            const ay = (getPositionXY(wrapperPosition).y - e.pageY + scrollY)/ 20;
+            wrapperPosition.style.transform = "rotateY("+ax+"deg) rotateX("+ay+"deg) rotateX("+ay+"deg) rotateX("+ay+"deg)";
+        });
     }
-
-    window.addEventListener('mousemove', e => {
-        console.log(getPositionXY(wrapperPosition).y)
-        console.log(e.pageY)
-        const ax = -(getPositionXY(wrapperPosition).x- e.pageX) / 20;
-        const ay = (getPositionXY(wrapperPosition).y - e.pageY + scrollY)/ 20;
-        wrapperPosition.style.transform = "rotateY("+ax+"deg) rotateX("+ay+"deg) rotateX("+ay+"deg) rotateX("+ay+"deg)";
-    });
 };
 
