@@ -20,16 +20,51 @@ window.onload = function() {
         circularText(text, 200, 0);
     }
 
-    function circularText(txt, radius, classIndex) {
-        txt = txt.split(""),
-            classIndex = document.getElementsByClassName("text-circle")[classIndex];
+    function determineLetterPadding(letter, lastLetter) {
+        if (letter === 'f' && lastLetter === 'm') {
+            if (mediaQuery1.matches) {
+                return 3;
+            }
+            if (mediaQuery4.matches) {
+                return 10;
+            }
+            return 14;
+        }
+        if (letter === 'r' && lastLetter === ' ') {
+            if (mediaQuery1.matches) {
+                return 3;
+            }
+            return 5;
+        }
+        if (letter === 'l' && lastLetter === 'p') {
+            if (mediaQuery1.matches) {
+                return 3;
+            }
+            if (mediaQuery4.matches) {
+                return 8;
+            }
+            return 10;
+        }
+        if (letter === 'l') {
+            if (mediaQuery1.matches) {
+                return 3;
+            }
+            return 5;
+        }
+        return 0;
+    }
 
-        var deg = 360 / txt.length,
+    function circularText(txt, radius, classIndex) {
+        txt = txt.split("")
+        classIndex = document.getElementsByClassName("text-circle")[classIndex];
+
+        let deg = 360 / txt.length,
             origin = 0;
 
         let lastLetter = '';
+
         txt.forEach((letter) => {
-            const letterP = `<p style='height:${radius}px;padding-left:${(letter === 'f' && lastLetter === 'm') || (letter === 'r' && lastLetter === ' ') ? "6px" : letter === 'l' ? mediaQuery1.matches ? '3px' : '5px' : 0};position:absolute;transform:rotate(${origin}deg);transform-origin:0 100%'>${letter}</p>`;
+            const letterP = `<p style='height:${radius}px;padding-left:${determineLetterPadding(letter, lastLetter)}px;position:absolute;transform:rotate(${origin}deg);transform-origin:0 100%'>${letter}</p>`;
             classIndex.innerHTML += letterP;
             origin += deg;
             lastLetter = letter;
@@ -38,7 +73,7 @@ window.onload = function() {
     const textCircleWrapper = document.getElementsByClassName("text-circle-wrapper")[0];
 
     window.addEventListener("scroll", function() {
-        textCircleWrapper.style.transform = "rotate("+window.pageYOffset / 6+"deg)";
+        textCircleWrapper.style.transform = "rotate("+-window.pageYOffset / 6+"deg)";
     });
 
     if (!mediaQuery2.matches) {
