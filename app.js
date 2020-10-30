@@ -4,7 +4,7 @@ window.onload = function() {
     let mediaQuery3 = window.matchMedia("(max-width: 993px)");
     let mediaQuery2 = window.matchMedia("(max-width: 800px)");
     let mediaQuery1 = window.matchMedia("(max-width: 600px)");
-    let text = "symfony, api platform and react. symfony, api platform and react. "
+    let text = "symfony, api platform and react. "
     if (mediaQuery1.matches) {
         text = "symfony, api platform and react. "
         circularText(text, 50, 0);
@@ -29,7 +29,7 @@ window.onload = function() {
 
         let lastLetter = '';
         txt.forEach((letter) => {
-            const letterP = `<p style='height:${radius}px;padding-left:${(letter === 'f' && lastLetter === 'm') || (letter === 'r' && lastLetter === ' ') ? "5px" : letter === 'l' ? '5px' : 0};position:absolute;transform:rotate(${origin}deg);transform-origin:0 100%'>${letter}</p>`;
+            const letterP = `<p style='height:${radius}px;padding-left:${(letter === 'f' && lastLetter === 'm') || (letter === 'r' && lastLetter === ' ') ? "5px" : letter === 'l' ? mediaQuery1.matches ? '3px' : '5px' : 0};position:absolute;transform:rotate(${origin}deg);transform-origin:0 100%'>${letter}</p>`;
             classIndex.innerHTML += letterP;
             origin += deg;
             lastLetter = letter;
@@ -49,8 +49,8 @@ window.onload = function() {
         }
 
         window.addEventListener('mousemove', e => {
-            const ax = -(getPositionXY(wrapperPosition).x- e.pageX) / 20;
-            const ay = (getPositionXY(wrapperPosition).y - e.pageY + scrollY)/ 20;
+            const ax = -(getPositionXY(wrapperPosition).x- e.pageX) / 40;
+            const ay = (getPositionXY(wrapperPosition).y - e.pageY + scrollY)/ 40;
             wrapperPosition.style.transform = "rotateY("+ax+"deg) rotateX("+ay+"deg) rotateX("+ay+"deg) rotateX("+ay+"deg)";
         });
     }

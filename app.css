@@ -181,6 +181,17 @@ main a {
 .project-details-link:hover {
     cursor: pointer;
 }
+.text-circle p {
+    font-size: 45px;
+    font-family: 'axiformabold', sans-serif;
+}
+#text-circle-wrapper-position {
+    -webkit-transition: all .15s ease;
+    -moz-transition: all .15s ease;
+    -o-transition: all .15s ease;
+    -ms-transition: all .15s ease;
+    transition: all .15s ease;
+}
 @media screen and (max-width: 1800px) {
     body {
         padding: 5rem 20rem 5rem 8rem;
@@ -206,6 +217,9 @@ main a {
         bottom: 30px;
         right: 80px;
     }
+    .text-circle p {
+        font-size: 39px;
+    }
 }
 @media screen and (max-width: 1200px) {
     body {
@@ -225,6 +239,9 @@ main a {
         bottom: 30px;
         right: 80px;
     }
+    .text-circle p {
+        font-size: 33px;
+    }
 }
 @media screen and (max-width: 993px) {
     body {
@@ -240,7 +257,7 @@ main a {
         right: 30px;
     }
     .text-circle p {
-        font-size: 16px;
+        font-size: 25px;
     }
 }
 @media screen and (max-width: 800px) {
@@ -260,7 +277,7 @@ main a {
         right: 30px;
     }
     .text-circle p {
-        font-size: 14px;
+        font-size: 18px;
     }
 }
 @media screen and (max-width: 600px) {
@@ -272,7 +289,7 @@ main a {
         width: 100px;
     }
     .text-circle p {
-        font-size: 12px;
+        font-size: 10px;
     }
     .text-circle-wrapper-wrapper {
         bottom: 20px;
