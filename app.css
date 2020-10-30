@@ -40,7 +40,7 @@ html {
     font-size: 16px;
 }
 body {
-    font-family: 'axiformamedium', 'sans-serif';
+    font-family: 'axiformaregularlegacy', 'sans-serif';
     color: black;
     background-color: #F7F8FA;
     margin: 0;
@@ -109,6 +109,14 @@ main a {
     -ms-transform: translate(-5%, -5%) skewX(-40deg);
     transform: translate(-5%, -5%) skewX(-40deg);
 }
+.test {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
 /* PROJECTS*/
 #projects {
     font-size: calc(16px + (25 - 16) * ((100vw - 300px) / (1600 - 300)));
@@ -120,6 +128,7 @@ main a {
 .project-details-tech {
     font-family: 'axiformamediumitalic', 'sans-serif';
     margin-bottom: 1.2rem;
+    margin-top: 1rem;
 }
 #projects ul {
     list-style: none;
@@ -149,7 +158,8 @@ main a {
 }
 .project-details-description {
     margin-top: 1rem;
-    line-height: 1;
+    line-height: 1.5;
+    color: #393939;
 }
 .project-details-link:hover {
     cursor: pointer;
