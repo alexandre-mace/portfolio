@@ -83,11 +83,11 @@ window.onload = function() {
             return {x: rect.x, y: rect.y}
         }
 
-        window.addEventListener('mousemove', e => {
-            const ax = -(getPositionXY(wrapperPosition).x- e.pageX) / 40;
-            const ay = (getPositionXY(wrapperPosition).y - e.pageY + scrollY)/ 40;
-            wrapperPosition.style.transform = "rotateY("+ax+"deg) rotateX("+ay+"deg) rotateX("+ay+"deg) rotateX("+ay+"deg)";
-        });
+        // window.addEventListener('mousemove', e => {
+        //     const ax = -(getPositionXY(wrapperPosition).x- e.pageX) / 40;
+        //     const ay = (getPositionXY(wrapperPosition).y - e.pageY + scrollY)/ 40;
+        //     wrapperPosition.style.transform = "rotateY("+ax+"deg) rotateX("+ay+"deg) rotateX("+ay+"deg) rotateX("+ay+"deg)";
+        // });
     }
 };
 

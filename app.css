@@ -134,9 +134,9 @@ main a {
     position: fixed;
     bottom: 100px;
     right: 150px;
-    -webkit-transform: translate(-5%, -5%) skewX(-40deg);
-    -ms-transform: translate(-5%, -5%) skewX(-40deg);
-    transform: translate(-5%, -5%) skewX(-40deg);
+    -webkit-transform: translate(-5%, -5%) skewX(-30deg);
+    -ms-transform: translate(-5%, -5%) skewX(-30deg);
+    transform: translate(-5%, -5%) skewX(-30deg);
 }
 .test {
     -webkit-transform: translateZ(0);
