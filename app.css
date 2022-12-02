@@ -89,21 +89,18 @@ header ul {
 }
 header ul li {
     display: inline-block;
+}
+header a {
+    color: black;
+    display: inline-block;
     margin-right: 3rem;
     padding: 6px 20px;
     background: #e5eaff;
     border-radius: 8px;
 }
-header ul li:hover {
-    background: #abbbff;
-}
-header a {
-    color: black;
-    display: inline-block;
-    transform: translateY(2px);
-}
 header a:hover {
     text-decoration: none;
+    background: #abbbff;
 }
 main a {
     font-family: 'axiformabold', sans-serif;
