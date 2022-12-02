@@ -89,11 +89,11 @@ header ul {
 }
 header ul li {
     display: inline-block;
+    margin-right: 3rem;
 }
 header a {
     color: black;
     display: inline-block;
-    margin-right: 3rem;
     padding: 6px 20px;
     background: #e5eaff;
     border-radius: 8px;
