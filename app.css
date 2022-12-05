@@ -289,9 +289,6 @@ main a {
     }
 }
 @media screen and (max-width: 600px) {
-    .main-contact {
-        padding: 2px 10px;
-    }
     .text-circle {
         height: 90px;
         width: 100px;
@@ -306,6 +303,9 @@ main a {
     header ul li {
         font-size: 1.2rem;
         margin-right: 1.8rem;
+    }
+    header ul li:last-child {
+        margin-right: none;
     }
     body {
         padding: 3rem 2rem 12rem 1.5rem;
