@@ -305,7 +305,7 @@ main a {
         margin-right: 1.8rem;
     }
     header ul li:last-child {
-        margin-right: none;
+        margin-right: 0;
     }
     body {
         padding: 3rem 2rem 12rem 1.5rem;
