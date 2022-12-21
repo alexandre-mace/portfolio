@@ -325,6 +325,12 @@ main a {
         margin-bottom: 2.3rem;
     }
 }
+@media screen and (max-width: 400px) {
+    header ul li {
+        margin-right: 1.2rem;
+        margin-bottom: 1.2rem;
+    }
+}
 /* HELPERS */
 .d-flex {
     display: flex;
