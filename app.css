@@ -73,6 +73,9 @@ a:hover {
 .custom-italic {
     font-family: 'axiformamediumitalic', 'sans-serif';
 }
+.custom-bold {
+    font-family: 'axiformamedium', 'sans-serif';
+}
 ul {
     list-style-type: none;
     padding-left: 0;
