@@ -99,7 +99,7 @@ header a {
     display: inline-flex;
     align-items: center;
     padding: 8px 20px 6px;
-    background: #e5eaff;
+    background: #d3d9fc;
     border-radius: 6px;
 }
 header a svg {
@@ -108,7 +108,7 @@ header a svg {
 }
 header a:hover {
     text-decoration: none;
-    background: #abbbff;
+    background: #ccd4ff;
 }
 main a {
     font-family: 'axiformabold', sans-serif;
