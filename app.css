@@ -51,11 +51,11 @@ h1, h2 {
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+    background-color: #F7F8FA;
 }
 body {
     font-family: 'axiformaregularlegacy', 'sans-serif';
-    color: black;
-    background-color: #F7F8FA;
+    color: #000000;
     margin: 0;
 }
 p {
@@ -63,7 +63,7 @@ p {
     margin-bottom: 1rem;
 }
 a {
-    color: #0737ff;
+    color: #0737FF;
     text-decoration: none;
     background-color: transparent;
 }
@@ -84,7 +84,7 @@ ul {
 body {
     padding: 7rem 40rem 7rem 10rem;
     width: calc(100% - 70rem);
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 header ul {
     font-size: 1.2rem;
@@ -99,8 +99,8 @@ header a {
     display: inline-flex;
     align-items: center;
     padding: 8px 20px 6px;
-    background: #d3d9fc;
-    border-radius: 6px;
+    background: #D3D9FC;
+    border-radius: 8px;
 }
 header a svg {
     margin-left: .5rem;
@@ -108,7 +108,7 @@ header a svg {
 }
 header a:hover {
     text-decoration: none;
-    background: #ccd4ff;
+    background: #CBD4FF;
 }
 main a {
     font-family: 'axiformabold', sans-serif;
@@ -129,7 +129,7 @@ main a {
     height: 390px;
     width: 400px;
     transform: translateX(50%);
-    color: #0737ff;
+    color: #0737FF;
 }
 .text-circle-wrapper-wrapper {
     position: fixed;
@@ -158,9 +158,15 @@ main a {
     margin-bottom: 1.4rem;
 }
 .project-details-tech {
-    font-family: 'axiformamediumitalic', 'sans-serif';
+    font-family: 'axiformamedium', 'sans-serif';
     margin-bottom: 1.2rem;
     margin-top: 1rem;
+    padding: 10px 14px 7px 14px;
+    background-color: #D3D9FC;
+    display: inline-flex;
+    width: fit-content;
+    border-radius: 8px;
+    font-size: 1.3rem;
 }
 #projects ul {
     list-style: none;
@@ -191,7 +197,6 @@ main a {
 .project-details-description {
     margin-top: 1rem;
     line-height: 1.5;
-    color: #393939;
     font-size: 1.3rem;
 }
 .project-details-link:hover {

@@ -4,9 +4,9 @@ window.onload = function() {
     let mediaQuery3 = window.matchMedia("(max-width: 993px)");
     let mediaQuery2 = window.matchMedia("(max-width: 800px)");
     let mediaQuery1 = window.matchMedia("(max-width: 600px)");
-    let text = "symfony, api platform and react. "
+    let text = "symfony, next.js and react."
     if (mediaQuery1.matches) {
-        text = "symfony, api platform and react. "
+        text = "symfony, next.js and react."
         circularText(text, 50, 0);
     } else if (mediaQuery2.matches)  {
         circularText(text, 85, 0);
