@@ -16,83 +16,62 @@
 
 }
 @font-face {
-    font-family: 'axiformamediumitalic';
-    src: url('fonts/Axiforma-MediumItalic.woff2') format('woff2'),
-    url('fonts/Axiforma-MediumItalic.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'axiformalegacyitalic';
-    src: url('fonts/Axiforma-BookItalic.woff2') format('woff2'),
-    url('fonts/Axiforma-BookItalic.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'axiformaregularlegacy';
+    font-family: 'axiformaregular';
     src: url('fonts/Axiforma-Book.woff2') format('woff2'),
     url('fonts/Axiforma-Book.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
-h1, h2 {
+h1, h2, h3 {
     margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
     font-weight: inherit;
     font-style: inherit;
     display: unset;
     font-size: 100%;
-    font-family: inherit;
-    vertical-align: baseline;
 }
 html {
     scroll-behavior: smooth;
     font-size: 16px;
     background-color: #F7F8FA;
-}
-body {
-    font-family: 'axiformaregularlegacy', 'sans-serif';
+    font-family: 'axiformaregular', 'sans-serif';
     color: #000000;
     margin: 0;
 }
-p {
-    margin-top: 0;
-    margin-bottom: 1rem;
+body {
+    padding: 7rem 10rem;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    margin: 0;
+}
+main {
+    width: calc(40vw);
 }
 a {
     color: #0737FF;
     text-decoration: none;
-    background-color: transparent;
 }
 a:hover {
     text-decoration: underline;
 }
-.custom-italic {
-    font-family: 'axiformamediumitalic', 'sans-serif';
-}
-.custom-bold {
-    font-family: 'axiformabold', 'sans-serif';
-}
 ul {
     list-style-type: none;
-    padding-left: 0;
+    padding: 0;
     margin: 0;
 }
-body {
-    padding: 7rem 40rem 7rem 10rem;
-    width: calc(100% - 70rem);
-    font-size: 1.2rem;
+p {
+    margin: 0;
 }
+/* GENERAL */
+
+
+/* HEADER */
 header ul {
-    font-size: 1.2rem;
     font-family: 'axiformabold', sans-serif;
-}
-header ul li {
-    display: inline-block;
-    margin-right: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 header a {
     color: black;
@@ -101,29 +80,41 @@ header a {
     padding: 8px 20px 6px;
     background: #D3D9FC;
     border-radius: 8px;
+    gap: .5rem;
 }
 header a svg {
-    margin-left: .5rem;
-    margin-bottom: 3px;
+    transform: translateY(-1px);
 }
 header a:hover {
     text-decoration: none;
     background: #CBD4FF;
 }
+/* HEADER */
+
+/* MAIN */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+}
 main a {
     font-family: 'axiformabold', sans-serif;
 }
-#introduction {
-    margin-top: 6rem;
-    margin-bottom: 7rem;
-    font-size: 1.8rem;
-}
+/* MAIN */
+
+/* INTRODUCTION */
 #introduction .main {
     font-size: 2.7rem;
     font-family: 'axiformabold', sans-serif;
     margin-bottom: 3.5rem;
     line-height: 1.3;
 }
+#introduction .main-description {
+    font-size: 1.8rem;
+}
+/* INTRODUCTION */
+
+/* TEXT-CIRCLE */
 .text-circle {
     display: inline-block;
     height: 390px;
@@ -139,69 +130,6 @@ main a {
     -ms-transform: translate(-5%, -5%) skewX(-30deg);
     transform: translate(-5%, -5%) skewX(-30deg);
 }
-.test {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-}
-/* PROJECTS*/
-#projects {
-    font-size: calc(16px + (25 - 16) * ((100vw - 300px) / (1600 - 300)));
-    overflow: hidden;
-}
-.project-details-title {
-    font-size: 3rem;
-    line-height: 1.2;
-    margin-bottom: 1.4rem;
-}
-.project-details-tech {
-    font-family: 'axiformamedium', 'sans-serif';
-    margin-bottom: 1.2rem;
-    margin-top: 1rem;
-    padding: 10px 14px 7px 14px;
-    background-color: #D3D9FC;
-    display: inline-flex;
-    width: fit-content;
-    border-radius: 8px;
-    font-size: 1.3rem;
-}
-#projects ul {
-    list-style: none;
-    padding-left: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-#projects ul li {
-    margin-bottom: 1.5rem;
-    line-height: 0.8;
-}
-#projects ul li:last-child {
-    margin-bottom: 0;
-}
-.project-details {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-#projects .project-title {
-    margin: 0;
-    position: relative;
-    line-height: 1;
-}
-.project > a:hover {
-    text-decoration: none;
-}
-.project-details-description {
-    margin-top: 1rem;
-    line-height: 1.5;
-    font-size: 1.3rem;
-}
-.project-details-link:hover {
-    cursor: pointer;
-}
 .text-circle p {
     font-size: 45px;
     font-family: 'axiformabold', sans-serif;
@@ -213,22 +141,80 @@ main a {
     -ms-transition: all .15s ease;
     transition: all .15s ease;
 }
-@media screen and (max-width: 1800px) {
-    body {
-        padding: 5rem 20rem 5rem 8rem;
-        width: calc(100% - 60rem);
-    }
+/*.text-circle-wrapper-wrapper {*/
+/*    -webkit-transform: translateZ(0);*/
+/*    transform: translateZ(0);*/
+/*    -webkit-transform-style: preserve-3d;*/
+/*    transform-style: preserve-3d;*/
+/*    -webkit-backface-visibility: hidden;*/
+/*    backface-visibility: hidden;*/
+/*}*/
+/* TEXT-CIRCLE */
+
+
+/* PROJECTS*/
+#projects {
+    font-size: calc(16px + (25 - 16) * ((100vw - 300px) / (1600 - 300)));
+    overflow: hidden;
+    margin-top: 3rem;
 }
+.project-details-title {
+    font-size: 3rem;
+    font-family: "axiformamedium", "sans-serif";
+    line-height: 1;
+    margin-bottom: .75rem;
+}
+.project-description {
+    margin-bottom: 1rem;
+}
+.project-details-tech {
+    font-family: 'axiformamedium', 'sans-serif';
+    padding: 3px 10px 0 10px;
+    background-color: #D3D9FC;
+    display: inline-flex;
+    width: fit-content;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+#projects ul {
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+}
+#projects a {
+    width: fit-content;
+    line-height: 1;
+}
+.project-details > a:first-of-type {
+    margin-bottom: .5rem;
+}
+.project-details {
+    display: flex;
+    flex-direction: column;
+}
+.project-details-description {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
+/* PROJECTS*/
+
+/* RESPONSIVE */
 @media screen and (max-width: 1600px) {
     body {
-        padding: 5rem 20rem 5rem 8rem;
-        width: calc(100% - 50rem);
+        padding: 5rem 8rem;
+    }
+    main {
+        width: calc(50vw);
     }
 }
 @media screen and (max-width: 1400px) {
     body {
-        padding: 5rem 20rem 5rem 8rem;
-        width: calc(100% - 40rem);
+        padding: 4rem 6rem;
+    }
+    main {
+        width: calc(55vw);
     }
     .text-circle {
         height: 310px;
@@ -243,14 +229,11 @@ main a {
     }
 }
 @media screen and (max-width: 1200px) {
-    body {
-        padding: 5rem 20rem 5rem 8rem;
-        width: calc(100% - 35rem);
+    main {
+        width: calc(60vw);
     }
     html {
         font-size: 14px;
-    }
-    #projects {
     }
     .text-circle {
         height: 250px;
@@ -266,8 +249,10 @@ main a {
 }
 @media screen and (max-width: 993px) {
     body {
-        padding: 3rem 10rem 3rem 6rem;
-        width: calc(100% - 25rem);
+        padding: 2rem 4rem;
+    }
+    main {
+        width: calc(65vw);
     }
     .text-circle {
         height: 190px;
@@ -280,14 +265,17 @@ main a {
     .text-circle p {
         font-size: 25px;
     }
+    .project-details-description {
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
 }
 @media screen and (max-width: 800px) {
     html {
         font-size: 12px;
     }
-    body {
-        padding: 3rem 8rem 3rem 3rem;
-        width: calc(100% - 12rem);
+    main {
+        width: calc(72vw);
     }
     .text-circle {
         height: 162px;
@@ -302,6 +290,18 @@ main a {
     }
 }
 @media screen and (max-width: 600px) {
+    body {
+        padding: 1.5rem 2rem;
+        gap: 4rem;
+    }
+    #introduction .main {
+        width: 100%;
+        margin-bottom: 1.3rem;
+        font-size: 2.5rem;
+    }
+    .project-details-title {
+        font-size: 2.3rem;
+    }
     .text-circle {
         height: 90px;
         width: 100px;
@@ -313,48 +313,26 @@ main a {
         bottom: 20px;
         right: 20px;
     }
-    header ul li {
-        font-size: 1.2rem;
-        margin-right: 1.8rem;
-    }
-    header ul li:last-child {
-        margin-right: 0;
-    }
-    body {
-        padding: 3rem 2rem 12rem 1.5rem;
-        width: calc(100% - 3.5rem);
-    }
-    html {
-        font-size: 12px;
-    }
-    #projects {
-        margin-top: 2.5rem;
-    }
-    #introduction {
-        margin-top: 3rem;
-        margin-bottom: 4rem;
-    }
-    #introduction .main {
-        margin-bottom: 2.3rem;
+    header ul {
+        gap: 1rem;
     }
 }
-@media screen and (max-width: 400px) {
-    header ul li {
-        margin-right: 1.2rem;
-        margin-bottom: 1.2rem;
-    }
-}
+/* RESPONSIVE */
+
 /* HELPERS */
-.d-flex {
+.flex {
     display: flex;
 }
-.flex-column {
+.bold {
+    font-family: 'axiformabold', 'sans-serif';
+}
+.flex-col {
     flex-direction: column;
 }
-.justify-content-between {
+.justify-between {
     justify-content: space-between;
 }
-.align-items-center {
+.items-center {
     align-items: center;
 }
 .mx-auto {
@@ -370,3 +348,4 @@ main a {
 .mt-2 {
     margin-top: 1rem;
 }
+/* HELPERS */
