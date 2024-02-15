@@ -299,7 +299,7 @@ main a {
     }
     #introduction .main {
         width: calc(100vw - 3rem);
-        margin-bottom: 1.3rem;
+        margin-bottom: 1.6rem;
         font-size: 2.5rem;
     }
     .main h1 {
