@@ -294,8 +294,10 @@ main a {
         padding: 1.5rem 2rem;
         gap: 4rem;
     }
+    main {
+        width: 92%;
+    }
     #introduction .main {
-        width: 100%;
         margin-bottom: 1.3rem;
         font-size: 2.5rem;
     }
