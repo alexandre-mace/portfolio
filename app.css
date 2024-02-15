@@ -298,6 +298,7 @@ main a {
         width: 88%;
     }
     #introduction .main {
+        width: calc(95vw - 3rem);
         margin-bottom: 1.3rem;
         font-size: 2.5rem;
     }
