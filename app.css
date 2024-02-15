@@ -291,11 +291,11 @@ main a {
 }
 @media screen and (max-width: 600px) {
     body {
-        padding: 1.5rem 2rem;
+        padding: 1.5rem 1.5rem;
         gap: 4rem;
     }
     main {
-        width: 92%;
+        width: 88%;
     }
     #introduction .main {
         margin-bottom: 1.3rem;
