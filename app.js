@@ -15,9 +15,9 @@ window.onload = function() {
     } else if (mediaQuery4.matches)  {
         circularText(text, 130, 0);
     } else if (mediaQuery5.matches)  {
-        circularText(text, 160, 0);
+        circularText(text, 140, 0);
     } else {
-        circularText(text, 200, 0);
+        circularText(text, 180, 0);
     }
 
     function determineLetterPadding(letter, lastLetter) {
