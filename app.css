@@ -77,10 +77,11 @@ header a {
     color: black;
     display: inline-flex;
     align-items: center;
-    padding: 8px 20px 6px;
+    padding: 16px 24px 14px;
     background: #D3D9FC;
     border-radius: 8px;
     gap: .5rem;
+    line-height: 1;
 }
 header a svg {
     transform: translateY(-1px);
@@ -103,14 +104,14 @@ main a {
 /* MAIN */
 
 /* INTRODUCTION */
-#introduction .main {
-    font-size: 2.7rem;
+#introduction .main-title {
+    font-size: 2.5rem;
     font-family: 'axiformabold', sans-serif;
-    margin-bottom: 2.8rem;
+    margin-bottom: 2.5rem;
     line-height: 1.3;
 }
 #introduction .main-description {
-    font-size: 1.8rem;
+    font-size: 2rem;
 }
 /* INTRODUCTION */
 
@@ -124,14 +125,14 @@ main a {
 }
 .text-circle-wrapper-wrapper {
     position: fixed;
-    bottom: 100px;
-    right: 150px;
+    bottom: 96px;
+    right: 152px;
     -webkit-transform: translate(-5%, -5%) skewX(-30deg);
     -ms-transform: translate(-5%, -5%) skewX(-30deg);
     transform: translate(-5%, -5%) skewX(-30deg);
 }
 .text-circle p {
-    font-size: 45px;
+    font-size: 3rem;
     font-family: 'axiformabold', sans-serif;
 }
 #text-circle-wrapper-position {
@@ -154,7 +155,7 @@ main a {
 
 /* PROJECTS*/
 #projects {
-    font-size: calc(16px + (25 - 16) * ((100vw - 300px) / (1600 - 300)));
+    font-size: 2rem;
     overflow: hidden;
     margin-top: 3rem;
 }
@@ -162,20 +163,21 @@ main a {
     font-size: 3rem;
     font-family: "axiformamedium", "sans-serif";
     line-height: 1;
-    margin-bottom: .75rem;
+    margin-bottom: .5rem;
 }
 .project-description {
     margin-bottom: 1rem;
 }
 .project-details-tech {
     font-family: 'axiformamedium', 'sans-serif';
-    padding: 3px 10px 0 10px;
+    padding: .5rem 1rem calc(.5rem - 2px) 1rem;
     background-color: #D3D9FC;
     display: inline-flex;
     width: fit-content;
     border-radius: 8px;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
+    line-height: 1;
 }
 #projects ul {
     padding-left: 0;
@@ -195,7 +197,7 @@ main a {
     flex-direction: column;
 }
 .project-details-description {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     margin-top: 1rem;
 }
 /* PROJECTS*/
@@ -221,30 +223,27 @@ main a {
         width: 320px;
     }
     .text-circle-wrapper-wrapper {
-        bottom: 30px;
+        bottom: 32px;
         right: 80px;
     }
     .text-circle p {
-        font-size: 39px;
+        font-size: 2.5rem;
     }
 }
 @media screen and (max-width: 1200px) {
     main {
         width: calc(60vw);
     }
-    html {
-        font-size: 14px;
-    }
     .text-circle {
         height: 250px;
         width: 260px;
     }
     .text-circle-wrapper-wrapper {
-        bottom: 30px;
+        bottom: 32px;
         right: 80px;
     }
     .text-circle p {
-        font-size: 33px;
+        font-size: 2rem;
     }
 }
 @media screen and (max-width: 993px) {
@@ -259,21 +258,18 @@ main a {
         width: 200px;
     }
     .text-circle-wrapper-wrapper {
-        bottom: 30px;
-        right: 30px;
+        bottom: 32px;
+        right: 32px;
     }
     .text-circle p {
-        font-size: 25px;
+        font-size: 1.5rem;
     }
     .project-details-description {
-        font-size: 1.2rem;
+        font-size: 1rem;
         margin-top: 1rem;
     }
 }
 @media screen and (max-width: 800px) {
-    html {
-        font-size: 12px;
-    }
     main {
         width: calc(72vw);
     }
@@ -282,11 +278,11 @@ main a {
         width: 170px;
     }
     .text-circle-wrapper-wrapper {
-        bottom: 30px;
-        right: 30px;
+        bottom: 32px;
+        right: 32px;
     }
     .text-circle p {
-        font-size: 18px;
+        font-size: 16px;
     }
 }
 @media screen and (max-width: 600px) {
@@ -297,27 +293,40 @@ main a {
     main {
         width: 88%;
     }
-    #introduction .main {
+    #introduction .main-title {
         width: calc(100vw - 3rem);
-        margin-bottom: 1.6rem;
-        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        font-size: 2rem;
     }
-    .main h1 {
+    #introduction .main-description {
+        font-size: 1.5rem;
+    }
+    #projects {
+        margin-top: 0;
+        font-size: 1.5rem;
+    }
+    #projects ul {
+        gap: 3.5rem;
+    }
+    .main-title h1 {
         display: inline-block;
     }
+    main {
+        gap: 4rem;
+    }
     .project-details-title {
-        font-size: 2.3rem;
+        font-size: 2rem;
     }
     .text-circle {
         height: 90px;
         width: 100px;
     }
     .text-circle p {
-        font-size: 10px;
+        font-size: 12px;
     }
     .text-circle-wrapper-wrapper {
-        bottom: 20px;
-        right: 20px;
+        bottom: 16px;
+        right: 16px;
     }
     header ul {
         gap: 1rem;
