@@ -281,6 +281,7 @@ main a {
     }
     header a {
         font-size: 1rem;
+        padding: 12px 14px 9px;
     }
     header ul {
         gap: 1rem;
