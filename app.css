@@ -156,7 +156,6 @@ main a {
 /* PROJECTS*/
 #projects {
     font-size: 1.4rem;
-    overflow: hidden;
     margin-top: 3rem;
 }
 .project-details-title {
@@ -164,6 +163,22 @@ main a {
     font-family: "axiformamedium", "sans-serif";
     line-height: 1;
     margin-bottom: .5rem;
+}
+.climatelab-tag {
+    background: #0737FF;
+    color: white;
+    padding: 4px 8px;
+    font-size: 14px;
+    display: inline-block;
+    transform: rotate(-4deg) translateY(-10px);
+    border-radius: 6px;
+    line-height: 1;
+}
+.climatelab-tag span {
+    display: inline-block;
+    transform: translateY(1px);
+}
+.climatelab-tag:hover {
 }
 .project-description {
     margin-bottom: 1rem;
