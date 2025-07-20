@@ -21,7 +21,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
               rel="noopener noreferrer"
               className="no-underline hover:no-underline"
             >
-              <Badge className="bg-primary hover:bg-primary/90 text-white text-sm -rotate-1 transform transition-colors">
+              <Badge className="bg-primary hover:bg-primary/90 text-white text-sm -rotate-3 -translate-y-1 transform transition-colors">
                 ⚗️ ClimateLab
               </Badge>
             </a>
