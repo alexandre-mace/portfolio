@@ -5,7 +5,7 @@ export function Introduction() {
   return (
     <section id="introduction">
       <div className="text-lg md:text-xl mb-2 md:mb-4 leading-tighter tracking-tight">
-        Hello, I&apos;m <h1 className="inline font-semibold">Alexandre Macé <Smile className={"inline -mt-0.5 h-4 w-4"}/></h1>
+        Hi, I&apos;m <h1 className="inline font-semibold">Alexandre Macé <Smile className={"inline -mt-0.5 h-4 w-4"}/></h1>
       </div>
       <div className="text-base">
         <h2 className="inline font-semibold">Full stack developer</h2>, currently working with{" "}
