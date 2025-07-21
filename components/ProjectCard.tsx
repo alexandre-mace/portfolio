@@ -1,10 +1,30 @@
 import { Project } from "@/lib/data"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import {Github, Globe} from "lucide-react";
+import {Github, Globe, LucideIcon} from "lucide-react";
 
 interface ProjectCardProps {
   project: Project
+}
+
+interface ProjectLinkProps {
+  href: string
+  label: string
+  icon: LucideIcon
+}
+
+function ProjectLink({ href, label, icon: Icon }: ProjectLinkProps) {
+  return (
+    <Button asChild variant="link" className="!p-0 h-auto text-primary font-semibold text-sm">
+      <a 
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {label} <Icon className="h-4 w-4" />
+      </a>
+    </Button>
+  )
 }
 
 export function ProjectCard({ project }: ProjectCardProps) {
@@ -31,28 +51,12 @@ export function ProjectCard({ project }: ProjectCardProps) {
         <Badge variant="outline" className="text-sm mb-2">
           {project.tech}
         </Badge>
-        <div className="flex gap-1">
+        <div className="flex gap-4">
           {project.links.online && (
-            <Button asChild variant="link" className="!p-0 h-auto text-primary font-semibold text-sm">
-              <a 
-                href={project.links.online}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Online <Globe className={"h-4 w-4"}></Globe>
-              </a>
-            </Button>
+            <ProjectLink href={project.links.online} label="Online" icon={Globe} />
           )}
           {project.links.github && (
-            <Button asChild variant="link" className="p-0 h-auto text-primary font-semibold text-sm">
-              <a 
-                href={project.links.github}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Github <Github className={"h-4 w-4"}/>
-              </a>
-            </Button>
+            <ProjectLink href={project.links.github} label="Github" icon={Github} />
           )}
         </div>
         <p className="text-base mt-2 md:mt-4">{project.fullDescription}</p>

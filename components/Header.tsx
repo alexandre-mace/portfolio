@@ -3,41 +3,49 @@ import { Mail, ExternalLink } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export function Header() {
+  const socialLinks = [
+    {
+      label: "Contact",
+      href: `mailto:${personalInfo.email}`,
+      icon: Mail,
+      external: false
+    },
+    {
+      label: "Github",
+      href: personalInfo.github,
+      icon: ExternalLink,
+      external: true
+    },
+    {
+      label: "Linkedin",
+      href: personalInfo.linkedin,
+      icon: ExternalLink,
+      external: true
+    }
+  ]
+
   return (
     <header>
       <ul className="flex flex-wrap gap-4">
-        <li>
-          <Button asChild variant="outline" size={"sm"}>
-            <a href={`mailto:${personalInfo.email}`}>
-              Contact
-              <Mail className="w-4 h-4" />
-            </a>
-          </Button>
-        </li>
-        <li>
-          <Button asChild variant="outline" size={"sm"}>
-            <a 
-              href={personalInfo.github}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Github 
-              <ExternalLink className="w-4 h-4" />
-            </a>
-          </Button>
-        </li>
-        <li>
-          <Button asChild variant="outline" size={"sm"}>
-            <a 
-              href={personalInfo.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Linkedin 
-              <ExternalLink className="w-4 h-4" />
-            </a>
-          </Button>
-        </li>
+        {socialLinks.map((link) => {
+          const Icon = link.icon
+          return (
+            <li key={link.label}>
+              <Button asChild variant="outline" size={"sm"}>
+                <a 
+                  href={link.href}
+                  {...(link.external && {
+                    target: "_blank",
+                    rel: "noopener noreferrer"
+                  })}
+                >
+                  {link.label}
+                  <Icon className="w-4 h-4" />
+                </a>
+              </Button>
+            </li>
+          )
+        })}
       </ul>
     </header>
   )

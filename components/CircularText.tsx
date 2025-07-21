@@ -1,16 +1,15 @@
 "use client"
 
 import { useEffect, useRef } from "react"
+import { CIRCULAR_TEXT, ANIMATION_CONSTANTS } from "@/lib/constants"
 
 export function CircularText() {
   const svgRef = useRef<SVGSVGElement>(null)
 
   useEffect(() => {
-    const text = "symfony, next.js and react."
-
     const handleScroll = () => {
       if (svgRef.current) {
-        const rotation = -window.pageYOffset / 6
+        const rotation = -window.pageYOffset / ANIMATION_CONSTANTS.SCROLL_ROTATION_DIVISOR
         svgRef.current.style.transform = `rotate(${rotation}deg)`
       }
     }
@@ -18,10 +17,6 @@ export function CircularText() {
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
-
-  const text = "symfony, next.js and react."
-  const radius = 500
-  const circumference = 2 * Math.PI * radius
   
   return (
     <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -skew-x-[30deg] pointer-events-none -z-10 opacity-[3%]">
@@ -36,7 +31,7 @@ export function CircularText() {
         <defs>
           <path
             id="circle-path"
-            d={`M 750,750 m -${radius},0 a ${radius},${radius} 0 1,1 ${radius * 2},0 a ${radius},${radius} 0 1,1 -${radius * 2},0`}
+            d={`M 750,750 m -${CIRCULAR_TEXT.RADIUS},0 a ${CIRCULAR_TEXT.RADIUS},${CIRCULAR_TEXT.RADIUS} 0 1,1 ${CIRCULAR_TEXT.RADIUS * 2},0 a ${CIRCULAR_TEXT.RADIUS},${CIRCULAR_TEXT.RADIUS} 0 1,1 -${CIRCULAR_TEXT.RADIUS * 2},0`}
           />
         </defs>
         <text 
@@ -46,7 +41,7 @@ export function CircularText() {
           className="font-bold"
         >
           <textPath href="#circle-path" startOffset="0%">
-            {text}
+            {CIRCULAR_TEXT.TEXT}
           </textPath>
         </text>
       </svg>
