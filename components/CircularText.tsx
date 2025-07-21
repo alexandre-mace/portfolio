@@ -7,7 +7,7 @@ export function CircularText() {
 
   useEffect(() => {
     const text = "symfony, next.js and react."
-    
+
     const handleScroll = () => {
       if (svgRef.current) {
         const rotation = -window.pageYOffset / 6
@@ -24,7 +24,7 @@ export function CircularText() {
   const circumference = 2 * Math.PI * radius
   
   return (
-    <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -skew-x-[30deg] pointer-events-none z-0 opacity-[3%]">
+    <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -skew-x-[30deg] pointer-events-none -z-10 opacity-[3%]">
       <svg 
         ref={svgRef}
         width="1500" 
