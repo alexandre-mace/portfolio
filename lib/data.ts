@@ -75,7 +75,7 @@ export const projects: Project[] = [
     description: "Individual GHG/CO2 data visualization",
     tech: "React",
     links: {
-      online: "https://alexandre-mace.github.io/footprint/",
+      online: "https://footprint.climatelab.fr",
       github: "https://github.com/alexandre-mace/footprint"
     },
     fullDescription: "Dynamic data visualization project, using Ademe base carbone's data.",
