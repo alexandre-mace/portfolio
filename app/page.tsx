@@ -13,7 +13,7 @@ export default function Home() {
         <Introduction />
 
         <section>
-          <ul className="space-y-10 md:space-y-20">
+          <ul className="space-y-10 md:space-y-16">
             {projects.map((project, index) => (
               <ProjectCard key={index} project={project} />
             ))}

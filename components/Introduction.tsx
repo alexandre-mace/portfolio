@@ -9,8 +9,8 @@ export function Introduction() {
   ]
 
   return (
-    <section id="introduction">
-      <div className="text-lg md:text-xl mb-2 md:mb-4 leading-tighter tracking-tight">
+    <section id="introduction" className={"space-y-2 md:space-y-4"}>
+      <div className="text-base md:text-lg leading-none tracking-tight">
         Hi, I&apos;m <h1 className="inline font-semibold">Alexandre Macé <Smile className={"inline -mt-0.5 h-4 w-4"}/></h1>
       </div>
       <div className="text-base">

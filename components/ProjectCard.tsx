@@ -31,7 +31,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
   return (
     <li>
         <div className="flex items-center gap-2 mb-1">
-          <h3 className="text-lg font-semibold tracking-tight leading-tighter">
+          <h3 className="md:text-lg font-semibold tracking-tight leading-tighter">
             {project.title}
           </h3>
           {project.isClimateLab && (
