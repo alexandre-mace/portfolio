@@ -2,6 +2,7 @@ import { Project } from "@/lib/data"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import {Github, Globe, LucideIcon} from "lucide-react";
+import Image from "next/image";
 
 interface ProjectCardProps {
   project: Project
@@ -41,8 +42,8 @@ export function ProjectCard({ project }: ProjectCardProps) {
               rel="noopener noreferrer"
               className="no-underline hover:no-underline"
             >
-              <Badge className="bg-primary hover:bg-primary/90 text-white text-sm -rotate-3 -translate-y-1 transform transition-colors">
-                ⚗️ ClimateLab
+              <Badge className="bg-primary hover:bg-primary/90 text-white text-xs -rotate-3 -translate-y-1 transform transition-colors">
+                <span><Image height={12} width={12} src={"https://em-content.zobj.net/source/apple/419/alembic_2697-fe0f.png"} alt={"Climate lab icône"}/></span>️ ClimateLab
               </Badge>
             </a>
           )}
