@@ -30,7 +30,7 @@ function ProjectLink({ href, label, icon: Icon }: ProjectLinkProps) {
 
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <li>
+    <li data-project-tech={project.tech} data-project-desc={project.fullDescription}>
         <div className="flex items-center gap-2 mb-1">
           <h3 className="md:text-lg font-semibold tracking-tight leading-tighter">
             {project.title}

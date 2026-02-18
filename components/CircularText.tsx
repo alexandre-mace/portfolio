@@ -19,7 +19,7 @@ export function CircularText() {
   }, [])
   
   return (
-    <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -skew-x-[30deg] pointer-events-none -z-10 opacity-[3%]">
+    <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -skew-x-[30deg] pointer-events-none -z-10 opacity-[3%] dark:opacity-[6%]">
       <svg 
         ref={svgRef}
         width="1500" 
