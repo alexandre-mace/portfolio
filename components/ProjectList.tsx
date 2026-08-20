@@ -21,7 +21,7 @@ export function ProjectList({ projects }: ProjectListProps) {
 
   return (
     <section className="flex flex-col gap-4 md:gap-6">
-      <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+      <div className="flex flex-col gap-2">
         <h2 className="font-mono text-base text-muted-foreground">Projects</h2>
         <ToggleGroup
           aria-label="Filter projects by topic"
