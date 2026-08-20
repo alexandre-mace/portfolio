@@ -146,7 +146,7 @@ export const projects: Project[] = [
     tech: "React",
     tags: ["climate"],
     links: {
-      online: "https://leclimat.vercel.app",
+      online: "https://leclimaten10minutes.climatelab.fr",
       github: "https://github.com/alexandre-mace/leclimat"
     },
     fullDescription: "Understand human responsibility, the consequences and the solutions of climate change in 10 minutes.",
@@ -158,7 +158,7 @@ export const projects: Project[] = [
     tech: "Next.js",
     tags: ["culture", "dataviz"],
     links: {
-      online: "https://state-manager-mu.vercel.app",
+      online: "https://state.alexandremace.fr",
       github: "https://github.com/alexandre-mace/state-manager"
     },
     fullDescription: "Educational dashboard about French public finances: revenues, spending, debt, and a net salary breakdown simulator."

@@ -30,7 +30,6 @@ export function ProjectList({ projects }: ProjectListProps) {
             const key = Array.from(keys)[0]
             setActiveTag(!key || key === "all" ? null : String(key))
           }}
-          disallowEmptySelection
           spacing={3}
           className="flex-wrap"
         >
