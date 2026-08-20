@@ -20,6 +20,7 @@ export interface Project {
   title: string
   description: string
   tech: string
+  tags: string[]
   links: {
     online?: string
     github?: string
@@ -30,50 +31,10 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: "Transitions",
-    description: "Fight solutions disinformation",
-    tech: "React",
-    links: {
-      online: "https://transitions.climatelab.fr/",
-      github: "https://github.com/alexandre-mace/transition"
-    },
-    fullDescription: "Exploring preconceived ideas about the transition to carbon neutrality",
-    isClimateLab: true
-  },
-  {
-    title: "BonPote",
-    description: "Environmental media website",
-    tech: "Wordpress",
-    links: {
-      online: "https://bonpote.com/"
-    },
-    fullDescription: "Independent, open-access and rigorous media on the climate emergency"
-  },
-  {
-    title: "Le diner du siècle",
-    description: "Refute climate inaction arguments",
-    tech: "React",
-    links: {
-      online: "https://ledinerdusiecle.bonpote.com/",
-      github: "https://github.com/alexandre-mace/bonpote-diner-ecolo"
-    },
-    fullDescription: "An educational tool that teaches you to refute with sources the classic climate inaction arguments."
-  },
-  {
-    title: "Plume",
-    description: "Simplified interactive carbon footprint simulator",
-    tech: "React",
-    links: {
-      online: "https://plume.climatelab.fr/",
-      github: "https://github.com/alexandre-mace/plume"
-    },
-    fullDescription: "Understand which metrics have the most impact on your footprint.",
-    isClimateLab: true
-  },
-  {
     title: "Footprint",
     description: "Individual GHG/CO2 data visualization",
     tech: "React",
+    tags: ["climate", "dataviz"],
     links: {
       online: "https://footprint.climatelab.fr",
       github: "https://github.com/alexandre-mace/footprint"
@@ -82,9 +43,142 @@ export const projects: Project[] = [
     isClimateLab: true
   },
   {
+    title: "Villes Futures",
+    description: "Elections meet climate projections",
+    tech: "React",
+    tags: ["climate", "dataviz"],
+    links: {
+      online: "https://citymap-three.vercel.app"
+    },
+    fullDescription: "Interactive map crossing the 2026 French municipal elections (50,000+ candidates across 34,000 communes) with climate projections from Météo France and the IPCC."
+  },
+  {
+    title: "BonPote",
+    description: "Environmental media website",
+    tech: "Wordpress",
+    tags: ["climate", "media"],
+    links: {
+      online: "https://bonpote.com/"
+    },
+    fullDescription: "Independent, open-access and rigorous media on the climate emergency."
+  },
+  {
+    title: "Culture",
+    description: "Interactive historical timelines",
+    tech: "Next.js",
+    tags: ["culture"],
+    links: {
+      online: "https://culture-amber.vercel.app",
+      github: "https://github.com/alexandre-mace/culture"
+    },
+    fullDescription: "Interactive chronological timelines to explore history, arts, sciences and society: 30 subjects with guided paths and quizzes."
+  },
+  {
+    title: "Graphothèque",
+    description: "Bon Pote's climate charts library",
+    tech: "Next.js",
+    tags: ["climate", "dataviz"],
+    links: {
+      online: "https://data.bonpote.com/"
+    },
+    fullDescription: "Bon Pote's library of climate charts and data visualizations."
+  },
+  {
+    title: "Plume",
+    description: "Simplified interactive carbon footprint simulator",
+    tech: "React",
+    tags: ["climate", "dataviz"],
+    links: {
+      online: "https://plume.climatelab.fr/",
+      github: "https://github.com/alexandre-mace/plume"
+    },
+    fullDescription: "Understand which metrics have the most impact on your footprint.",
+    isClimateLab: true
+  },
+  {
+    title: "Transitions",
+    description: "Fight solutions disinformation",
+    tech: "React",
+    tags: ["climate"],
+    links: {
+      online: "https://transitions.climatelab.fr/",
+      github: "https://github.com/alexandre-mace/transition"
+    },
+    fullDescription: "Exploring preconceived ideas about the transition to carbon neutrality",
+    isClimateLab: true
+  },
+  {
+    title: "Dev standards",
+    description: "Coding guidelines and Claude Code skills",
+    tech: "Claude Code",
+    tags: ["tooling"],
+    links: {
+      github: "https://github.com/alexandre-mace/dev-standards"
+    },
+    fullDescription: "Coding guidelines for Symfony and React projects, plus a set of Claude Code skills that enforce them."
+  },
+  {
+    title: "Thermomètre",
+    description: "IPCC AR6 data explorer",
+    tech: "Next.js",
+    tags: ["climate", "dataviz"],
+    links: {
+      online: "https://thermometre.climatelab.fr",
+      github: "https://github.com/alexandre-mace/thermometre"
+    },
+    fullDescription: "Causes, consequences and solutions of climate change: searchable figures and projections, sourced from the IPCC AR6 report.",
+    isClimateLab: true
+  },
+  {
+    title: "Le diner du siècle",
+    description: "Refute climate inaction arguments",
+    tech: "React",
+    tags: ["climate"],
+    links: {
+      online: "https://ledinerdusiecle.bonpote.com/",
+      github: "https://github.com/alexandre-mace/bonpote-diner-ecolo"
+    },
+    fullDescription: "An educational tool that teaches you to refute with sources the classic climate inaction arguments."
+  },
+  {
+    title: "Le climat en 10 minutes",
+    description: "Climate change essentials",
+    tech: "React",
+    tags: ["climate"],
+    links: {
+      online: "https://leclimat.vercel.app",
+      github: "https://github.com/alexandre-mace/leclimat"
+    },
+    fullDescription: "Understand human responsibility, the consequences and the solutions of climate change in 10 minutes.",
+    isClimateLab: true
+  },
+  {
+    title: "State manager",
+    description: "French public finances dashboard",
+    tech: "Next.js",
+    tags: ["culture", "dataviz"],
+    links: {
+      online: "https://state-manager-mu.vercel.app",
+      github: "https://github.com/alexandre-mace/state-manager"
+    },
+    fullDescription: "Educational dashboard about French public finances: revenues, spending, debt, and a net salary breakdown simulator."
+  },
+  {
+    title: "ClimateLab",
+    description: "Digital tools for the climate",
+    tech: "Next.js",
+    tags: ["climate"],
+    links: {
+      online: "https://climatelab.fr",
+      github: "https://github.com/alexandre-mace/climatelab"
+    },
+    fullDescription: "A collection of digital tools for the climate, to grasp the orders of magnitude behind carbon neutrality."
+  },
+  {
     title: "Explorateur",
     description: "Collective GHG/CO2 data visualization",
     tech: "React",
+    tags: ["climate", "dataviz"],
     links: {
       online: "https://explorateur.climatelab.fr/",
       github: "https://github.com/alexandre-mace/explorateur"
@@ -93,33 +187,25 @@ export const projects: Project[] = [
     isClimateLab: true
   },
   {
-    title: "Energy book",
-    description: "Interactive book about energy",
-    tech: "React",
-    links: {
-      online: "https://energybook.climatelab.fr/",
-      github: "https://github.com/alexandre-mace/energybook"
-    },
-    fullDescription: "Dynamic data visualization project, using look alike domain driven architecture, chartjs and csv/json sources files. The book has 3 modes : playground, versus and narrative."
-  },
-  {
-    title: "Faucon",
-    description: "Information about disinformation",
-    tech: "React",
-    links: {
-      online: "https://faucon-snowy.vercel.app/",
-      github: "https://github.com/alexandre-mace/faucon"
-    },
-    fullDescription: "Website that informs you about the manipulation forms. You can explore definitions in an endless navigation. I scrap wikipedia in the background in pure javascript and extract title, paragraph, and associated topics."
-  },
-  {
     title: "Wealth repartition simulator",
     description: "What would happen if wealth was shared ?",
     tech: "React",
+    tags: ["dataviz"],
     links: {
       online: "https://alexandre-mace.github.io/wealth-repartition-simulator",
       github: "https://github.com/alexandre-mace/wealth-repartition-simulator"
     },
     fullDescription: "Dynamic data visualization project about wealth/poverty. The map, data bindings and color system are done from scratch."
+  },
+  {
+    title: "Taste",
+    description: "A personal museum of taste",
+    tech: "Next.js",
+    tags: ["culture", "design"],
+    links: {
+      online: "https://taste-three-zeta.vercel.app",
+      github: "https://github.com/alexandre-mace/taste"
+    },
+    fullDescription: "A personal museum of taste: iconic pieces of design (watches, chairs, cars, interiors) explored chronologically and ranked through duels."
   }
 ]
