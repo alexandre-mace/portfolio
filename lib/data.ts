@@ -68,7 +68,7 @@ export const projects: Project[] = [
     tech: "Next.js",
     tags: ["culture"],
     links: {
-      online: "https://culture-amber.vercel.app",
+      online: "https://culture.alexandremace.fr",
       github: "https://github.com/alexandre-mace/culture"
     },
     fullDescription: "Interactive chronological timelines to explore history, arts, sciences and society: 30 subjects with guided paths and quizzes."
@@ -203,7 +203,7 @@ export const projects: Project[] = [
     tech: "Next.js",
     tags: ["culture", "design"],
     links: {
-      online: "https://taste-three-zeta.vercel.app",
+      online: "https://taste.alexandremace.fr",
       github: "https://github.com/alexandre-mace/taste"
     },
     fullDescription: "A personal museum of taste: iconic pieces of design (watches, chairs, cars, interiors) explored chronologically and ranked through duels."
