@@ -1,7 +1,6 @@
 import { personalInfo } from "@/lib/data"
 import { Mail, ExternalLink } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { ModeToggle } from "@/components/mode-toggle"
+import { LinkButton } from "@/components/ui/button"
 
 export function Header() {
   const socialLinks = [
@@ -27,29 +26,29 @@ export function Header() {
 
   return (
     <header>
-      <div className="flex items-center justify-between gap-4">
-        <ul className="flex flex-wrap gap-4">
+      <div className="flex items-center gap-4">
+        <ul className="flex flex-wrap gap-6">
           {socialLinks.map((link) => {
             const Icon = link.icon
             return (
               <li key={link.label}>
-                <Button asChild variant="outline" size={"sm"}>
-                  <a
-                    href={link.href}
-                    {...(link.external && {
-                      target: "_blank",
-                      rel: "noopener noreferrer"
-                    })}
-                  >
-                    {link.label}
-                    <Icon className="w-4 h-4" />
-                  </a>
-                </Button>
+                <LinkButton
+                  variant="link"
+                  size={"sm"}
+                  className="px-0 has-[>svg]:px-0 p-0 h-auto underline decoration-primary/40 hover:decoration-primary transition-colors text-base font-medium"
+                  href={link.href}
+                  {...(link.external && {
+                    target: "_blank",
+                    rel: "noopener noreferrer"
+                  })}
+                >
+                  {link.label}
+                  <Icon className="w-4 h-4" />
+                </LinkButton>
               </li>
             )
           })}
         </ul>
-        <ModeToggle />
       </div>
     </header>
   )
