@@ -198,6 +198,17 @@ export const projects: Project[] = [
     fullDescription: "Dynamic data visualization project about wealth/poverty. The map, data bindings and color system are done from scratch."
   },
   {
+    title: "UI kit",
+    description: "A personal shadcn registry shared across projects",
+    tech: "Next.js",
+    tags: ["design", "tooling"],
+    links: {
+      online: "https://ui.alexandremace.fr",
+      github: "https://github.com/alexandre-mace/ui"
+    },
+    fullDescription: "A personal design system published as a shadcn registry: theme tokens and React Aria components pulled into every project with one command."
+  },
+  {
     title: "Taste",
     description: "A personal museum of taste",
     tech: "Next.js",
