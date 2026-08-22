@@ -22,6 +22,6 @@
   "menuColor": "default",
   "menuAccent": "subtle",
   "registries": {
-    "@alexandremace": "https://ui-beige-beta.vercel.app/r/{name}.json"
+    "@alexandremace": "https://ui.alexandremace.fr/r/{name}.json"
   }
 }
