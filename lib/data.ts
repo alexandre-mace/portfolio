@@ -48,7 +48,7 @@ export const projects: Project[] = [
     tech: "React",
     tags: ["climate", "dataviz"],
     links: {
-      online: "https://citymap-three.vercel.app"
+      online: "https://villesfutures.bonpote.com"
     },
     fullDescription: "Interactive map crossing the 2026 French municipal elections (50,000+ candidates across 34,000 communes) with climate projections from Météo France and the IPCC."
   },
