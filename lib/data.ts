@@ -33,13 +33,13 @@ export const projects: Project[] = [
   {
     title: "Footprint",
     description: "Individual GHG/CO2 data visualization",
-    tech: "React",
+    tech: "Next.js",
     tags: ["climate", "dataviz"],
     links: {
       online: "https://footprint.climatelab.fr",
       github: "https://github.com/alexandre-mace/footprint"
     },
-    fullDescription: "Dynamic data visualization project, using Ademe base carbone's data.",
+    fullDescription: "Grasp the orders of magnitude of your carbon footprint: an activity comparator built on Ademe's data and a footprint simulator with ranked climate actions.",
     isClimateLab: true
   },
   {
@@ -82,18 +82,6 @@ export const projects: Project[] = [
       online: "https://data.bonpote.com/"
     },
     fullDescription: "Bon Pote's library of climate charts and data visualizations."
-  },
-  {
-    title: "Plume",
-    description: "Simplified interactive carbon footprint simulator",
-    tech: "React",
-    tags: ["climate", "dataviz"],
-    links: {
-      online: "https://plume.climatelab.fr/",
-      github: "https://github.com/alexandre-mace/plume"
-    },
-    fullDescription: "Understand which metrics have the most impact on your footprint.",
-    isClimateLab: true
   },
   {
     title: "Transitions",
