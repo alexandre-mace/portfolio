@@ -114,7 +114,7 @@ export const projects: Project[] = [
       online: "https://thermometre.climatelab.fr",
       github: "https://github.com/alexandre-mace/thermometre"
     },
-    fullDescription: "Causes, consequences and solutions of climate change: searchable figures and projections, sourced from the IPCC AR6 report.",
+    fullDescription: "Causes, consequences and solutions of climate change: searchable IPCC AR6 figures alongside live Our World in Data charts.",
     isClimateLab: true
   },
   {
@@ -161,18 +161,6 @@ export const projects: Project[] = [
       github: "https://github.com/alexandre-mace/climatelab"
     },
     fullDescription: "A collection of digital tools for the climate, to grasp the orders of magnitude behind carbon neutrality."
-  },
-  {
-    title: "Explorateur",
-    description: "Collective GHG/CO2 data visualization",
-    tech: "React",
-    tags: ["climate", "dataviz"],
-    links: {
-      online: "https://explorateur.climatelab.fr/",
-      github: "https://github.com/alexandre-mace/explorateur"
-    },
-    fullDescription: "Dynamic data visualization project, using OWID and climatewatch's data.",
-    isClimateLab: true
   },
   {
     title: "Wealth repartition simulator",
