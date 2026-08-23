@@ -84,6 +84,18 @@ export const projects: Project[] = [
     fullDescription: "Bon Pote's library of climate charts and data visualizations."
   },
   {
+    title: "Mix",
+    description: "Build France's 2050 power mix",
+    tech: "Next.js",
+    tags: ["climate", "dataviz"],
+    links: {
+      online: "https://mix.climatelab.fr",
+      github: "https://github.com/alexandre-mace/mix"
+    },
+    fullDescription: "A sandbox for France's 2050 electricity mix, bounded by the industrial limits RTE describes: every missing low-carbon TWh keeps fossil fuels burning.",
+    isClimateLab: true
+  },
+  {
     title: "Transitions",
     description: "Fight solutions disinformation",
     tech: "React",
