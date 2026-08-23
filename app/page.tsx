@@ -1,17 +1,19 @@
 import { Header } from "@/components/Header"
 import { Introduction } from "@/components/Introduction"
+import { MadeWithLove } from "@/components/made-with-love"
 import { ProjectList } from "@/components/ProjectList"
 import { projects } from "@/lib/data"
 
 export default function Home() {
   return (
-    <div className="font-sans p-4 md:p-10 pb-20 md:pb-40 container mx-auto max-w-3xl space-y-10 md:space-y-20">
+    <div className="font-sans p-4 md:p-10 pb-10 md:pb-20 container mx-auto max-w-3xl space-y-10 md:space-y-20">
       <Header />
       <main className="space-y-10 md:space-y-20">
         <Introduction />
 
         <ProjectList projects={projects} />
       </main>
+      <MadeWithLove />
     </div>
   );
 }
