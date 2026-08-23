@@ -25,9 +25,9 @@ export default async function Icon() {
           alignItems: "flex-end",
           justifyContent: "flex-start",
           background: "#FAF8F0",
-          borderRadius: 14,
-          paddingLeft: 7,
-          paddingBottom: 3,
+          borderRadius: 12,
+          paddingLeft: 3,
+          paddingBottom: 0,
         }}
       >
         <div
