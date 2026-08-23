@@ -22,22 +22,23 @@ export default async function Icon() {
           width: "100%",
           height: "100%",
           display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
+          alignItems: "flex-end",
+          justifyContent: "flex-start",
           background: "#FAF8F0",
           borderRadius: 14,
+          paddingLeft: 7,
+          paddingBottom: 3,
         }}
       >
         <div
           style={{
             display: "flex",
             flexDirection: "column",
-            alignItems: "center",
+            alignItems: "flex-start",
             fontFamily: "Geist",
             fontSize: 38,
             fontWeight: 700,
-            lineHeight: 0.72,
-            marginTop: -2,
+            lineHeight: 0.62,
           }}
         >
           <span style={{ color: "#0737FF" }}>a</span>
