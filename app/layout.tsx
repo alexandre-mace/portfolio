@@ -7,9 +7,6 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://alexandremace.fr"),
   title: "Alexandre Macé - Full stack developer",
   description: "Alexandre Macé, fullstack developer working with symfony and react. Taking part in projects tied to climate or biodiversity.",
-  icons: {
-    icon: '/favicon.png',
-  },
   openGraph: {
     title: "Alexandre Macé - Full stack developer",
     description: "Alexandre Macé, fullstack developer working with symfony and react. Taking part in projects tied to climate or biodiversity.",
