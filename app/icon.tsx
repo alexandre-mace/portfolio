@@ -40,8 +40,8 @@ export default async function Icon() {
             marginTop: -2,
           }}
         >
-          <span style={{ color: "#171717" }}>a</span>
-          <span style={{ color: "#0737FF" }}>m</span>
+          <span style={{ color: "#0737FF" }}>a</span>
+          <span style={{ color: "#171717" }}>m</span>
         </div>
       </div>
     ),
