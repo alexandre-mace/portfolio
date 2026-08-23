@@ -177,13 +177,13 @@ export const projects: Project[] = [
   {
     title: "Wealth repartition simulator",
     description: "What would happen if wealth was shared ?",
-    tech: "React",
+    tech: "Vite",
     tags: ["dataviz"],
     links: {
-      online: "https://alexandre-mace.github.io/wealth-repartition-simulator",
+      online: "https://wealth-repartition-simulator.vercel.app",
       github: "https://github.com/alexandre-mace/wealth-repartition-simulator"
     },
-    fullDescription: "Dynamic data visualization project about wealth/poverty. The map, data bindings and color system are done from scratch."
+    fullDescription: "One of my first projects, from 2019, brought back to life. Move a single slider and the world map redraws itself, from incomes as they are to a world where everyone earns the average. The map, the data bindings and the colour system are done from scratch. The 2019 version averaged national averages, which gave Liechtenstein the same weight as India and overstated the wealth to share by 39%: the average is now weighted by population, on World Bank 2024 data."
   },
   {
     title: "UI kit",
