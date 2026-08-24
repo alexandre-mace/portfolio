@@ -22,15 +22,15 @@ export function ProjectList({ projects }: ProjectListProps) {
         <h2 className="font-mono text-base text-muted-foreground">Projects</h2>
         <TagFilterGroup
           aria-label="Filter projects by topic"
-          selectedKeys={[activeTag ?? "all"]}
-          onSelectionChange={(keys) => {
-            const key = Array.from(keys)[0]
+          value={[activeTag ?? "all"]}
+          onValueChange={(value) => {
+            const key = value[0]
             setActiveTag(!key || key === "all" ? null : String(key))
           }}
         >
-          <TagFilterItem id="all">all</TagFilterItem>
+          <TagFilterItem value="all">all</TagFilterItem>
           {tags.map((tag) => (
-            <TagFilterItem key={tag} id={tag}>
+            <TagFilterItem key={tag} value={tag}>
               {tag}
             </TagFilterItem>
           ))}
