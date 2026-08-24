@@ -180,7 +180,7 @@ export const projects: Project[] = [
     tech: "Next.js",
     tags: ["dataviz"],
     links: {
-      online: "https://wealth-repartition-simulator.vercel.app",
+      online: "https://wealth.alexandremace.fr",
       github: "https://github.com/alexandre-mace/wealth-repartition-simulator"
     },
     fullDescription: "One of my first projects, from 2019, brought back to life. Move a single slider and the world map redraws itself, from incomes as they are to a world where everyone earns the average. The map, the data bindings and the colour system are done from scratch."
