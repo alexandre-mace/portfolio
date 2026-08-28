@@ -39,3 +39,10 @@ Run `npx shadcn@latest add <component>`. Configuration is in `components.json`. 
 - **Remote images**: `next.config.ts` allows all HTTPS image hostnames
 - **SEO**: Full OpenGraph and Twitter card metadata configured in `app/layout.tsx`
 - **No tests or CI** configured currently
+
+## Conventions de la stack
+
+Les conventions communes à mes projets Next vivent dans `docs/next-guidelines.md`,
+un lien vers le dépôt partagé [dev-standards](https://github.com/alexandre-mace/dev-standards)
+(fichier `next/next-guidelines.md`). Si ce lien est cassé, c'est que le dépôt n'est
+pas cloné à côté de celui-ci : lire la version en ligne.
