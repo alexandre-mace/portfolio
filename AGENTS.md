@@ -28,7 +28,7 @@ All project and personal data lives in `lib/data.ts` as typed constants (`Projec
 - Tailwind v4 with CSS variables defined in `app/globals.css` using OkLCh color space
 - Single light theme only — no dark mode
 - Primary color: `#0737FF`; background: `#FAF8F0` (subtle sand, set on `<body>` in layout); cards: `#FDFCF8` with border
-- Geist Sans and Geist Mono loaded via `next/font/google` in `app/layout.tsx`
+- Geist Sans and Geist Mono loaded from the `geist` npm package in `app/layout.tsx`
 
 ### Adding shadcn/ui Components
 
