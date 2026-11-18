@@ -36,7 +36,7 @@ Run `npx shadcn@latest add <component>`. Configuration is in `components.json`. 
 
 ### Key Configuration
 
-- **Remote images**: `next.config.ts` allows all HTTPS image hostnames
+- **Images**: `images.unoptimized` in `next.config.ts`, no Vercel transformation (the Hobby quota is shared by every project on the account)
 - **SEO**: Full OpenGraph and Twitter card metadata configured in `app/layout.tsx`
 - **No tests or CI** configured currently
 
